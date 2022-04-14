@@ -1,0 +1,4 @@
+/node_modules/
+/.idea/
+/lerna-debug.log
+/packages/ui/node_modules/

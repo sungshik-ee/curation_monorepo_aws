@@ -10,6 +10,7 @@
   },
   "keywords": [],
   "author": "",
+  "private": true,
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -45,5 +46,6 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  }
+  },
+  "gitHead": "3867d8ab948e5c5f6f708af7908f5f68917fe0c3"
 }

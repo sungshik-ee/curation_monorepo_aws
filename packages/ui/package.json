@@ -46,5 +46,8 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
-  "gitHead": "29ac435cd39b57c9c97e1d87c276b66bf3aaa4b6"
+  "repository": {
+    "url": "ssh://git@github.com:DanbiEduCorp/curation_monorepo.git"
+  },
+  "gitHead": "f2cee46d5d2144c004aa26fcb5dba5e049b8596d"
 }

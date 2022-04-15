@@ -1,6 +1,6 @@
 {
   "name": "@curation/mobile",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@curation/ui": "^1.0.0",
+    "@curation/ui": "^0.0.1",
     "next": "12.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"

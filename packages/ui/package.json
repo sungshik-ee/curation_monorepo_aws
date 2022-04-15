@@ -10,7 +10,6 @@
   },
   "keywords": [],
   "author": "",
-  "private": true,
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",

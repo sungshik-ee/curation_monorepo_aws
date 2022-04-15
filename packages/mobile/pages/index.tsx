@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import {Page} from '@curation/ui/stories/Page'
+import {Page} from '@DanbiEduCorp/ui/stories/Page'
 
 const Home: NextPage = () => {
   return (

@@ -1,6 +1,6 @@
 {
-  "name": "@curation/ui",
-  "version": "0.0.1",
+  "name": "@DanbiEduCorp/ui",
+  "version": "0.0.12",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -45,5 +45,9 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  }
+  },
+  "repository": {
+    "url": "ssh://git@github.com:DanbiEduCorp/curation_monorepo.git"
+  },
+  "gitHead": "e2801a4e206eb60c629c7f24e300d892a4e36a55"
 }

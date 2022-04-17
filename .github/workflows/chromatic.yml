@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CHROMATIC_WORKING_DIR: ./packages/ui
+      STORYBOOK_BUILD_DIR: ./packages/ui/storybook-static
     # Job steps
     steps:
       - uses: actions/checkout@v1
@@ -37,4 +38,5 @@ jobs:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
           projectToken: ${{ secrets.CURATION_CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.PAT_WORKFLOW_TOKEN}}
-          working-directory: ${{ env.CHROMATIC_WORKING_DIR }}
+#          working-directory: ${{ env.CHROMATIC_WORKING_DIR }}
+          storybookBuildDir: ${{ env.STORYBOOK_BUILD_DIR }}

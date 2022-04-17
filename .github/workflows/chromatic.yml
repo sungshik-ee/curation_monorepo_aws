@@ -1,20 +1,22 @@
 # .github/workflows/chromatic.yml
 
 # Workflow name
-name: 'Chromatic Deployment'
+name: 'Chromatic(Storybook) Deployment'
 
-# Event for the workflow (For Test)
-on:
-  push
 # Event for the workflow
-#on:
-#  push:
-#    branches:
-#      - 'develop'
-#      - 'feature/**'
-#      - '!master'
-#    paths:
-#      - 'packages/ui/stories/**'#push_request
+on:
+  pull_request:
+    branches:
+      - 'develop'
+    types: [closed]
+    paths:
+      - 'packages/ui/stories/**'
+  push:
+    branches:
+      - 'feature/**'
+      - 'master'
+    paths:
+      - 'packages/ui/stories/**'
 
 # List of jobs
 jobs:
@@ -23,7 +25,6 @@ jobs:
     # Operating System
     runs-on: ubuntu-latest
     env:
-      CHROMATIC_WORKING_DIR: ./packages/ui
       STORYBOOK_BUILD_DIR: ./packages/ui/storybook-static
     # Job steps
     steps:
@@ -38,5 +39,4 @@ jobs:
           #👇 Chromatic projectToken, see https://storybook.js.org/tutorials/intro-to-storybook/react/en/deploy/ to obtain it
           projectToken: ${{ secrets.CURATION_CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.PAT_WORKFLOW_TOKEN}}
-#          working-directory: ${{ env.CHROMATIC_WORKING_DIR }}
           storybookBuildDir: ${{ env.STORYBOOK_BUILD_DIR }}

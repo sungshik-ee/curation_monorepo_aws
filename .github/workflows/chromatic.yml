@@ -5,15 +5,10 @@ name: 'Chromatic(Storybook) Deployment'
 
 # Event for the workflow
 on:
-  pull_request:
-    branches:
-      - 'develop'
-    types: [closed]
-    paths:
-      - 'packages/ui/stories/**'
   push:
     branches:
       - 'feature/**'
+      - 'develop'
       - 'master'
     paths:
       - 'packages/ui/stories/**'

@@ -2,3 +2,5 @@
 /.idea/
 /lerna-debug.log
 /packages/ui/node_modules/
+/packages/ui/storybook-static/
+*.log

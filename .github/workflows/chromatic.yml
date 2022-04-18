@@ -24,13 +24,6 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-#      - name: Use Node.js 14.x
-#        uses: actions/setup-node@v1
-#        with:
-#          node-version: 14.x
-        #👇 Adds Chromatic as a step in the workflow
-      - name: Set Yarn berry
-        run: yarn set version berry
       - name: Install packages
         run: yarn install
       - name: build application

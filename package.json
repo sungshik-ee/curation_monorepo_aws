@@ -10,6 +10,7 @@
   "scripts": {
     "ui_dev": "lerna run storybook",
     "mobile_dev": "lerna run dev",
+    "mobile_build": "lerna run build",
     "legacy_dev": "lerna run books_start"
   }
 }

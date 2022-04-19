@@ -24,10 +24,12 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
+      - name: Ready for using lerna
+        run: npm install -g lerna
       - name: Install packages
-        run: yarn install
+        run: lerna bootstrap
       - name: build application
-        run: yarn run ui_build
+        run: lerna run build-storybook
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:

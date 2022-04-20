@@ -43,10 +43,10 @@ const Item = styled.div`
       &.left {margin-left: 0;}
       &.right {margin-left: 50%;}
     `
-  }
+}
 `;
 
-export const IntroButton: React.FC = ({active, label}) => {
+export const BookLevelButton: React.FC = ({active, label}) => {
     return (
         <Container>
             <Item active={active}>{label}</Item>
@@ -54,12 +54,12 @@ export const IntroButton: React.FC = ({active, label}) => {
     )
 }
 
-IntroButton.propTypes = {
+BookLevelButton.propTypes = {
     active: PropTypes.bool,
     label: PropTypes.string,
     key: PropTypes.number
 }
 
-IntroButton.defaultProps = {
+BookLevelButton.defaultProps = {
     active: false
 }

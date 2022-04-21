@@ -8,8 +8,14 @@ export default {
 } as ComponentMeta<typeof Button>
 
 const Template : ComponentStory<typeof Button> = (args) => <Button {...args} />
-export const RA = Template.bind({})
-RA.args = {
+export const RED = Template.bind({})
+RED.args = {
     active: false,
-    label: '책과 만나요',
+    label: '책과 만나요 단계',
 };
+
+export const BLUE = Template.bind({})
+BLUE.args = {
+    activeType: 'blue',
+    label: '책과 만나요 단계',
+}

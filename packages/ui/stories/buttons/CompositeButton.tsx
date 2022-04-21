@@ -4,6 +4,7 @@ import { Container, Row, Col} from 'styled-bootstrap-grid';
 
 import {IntroButton} from "./IntroButton";
 import {BookLevelButton} from "./BookLevelButton";
+import {Composition} from "atomic-layout";
 
 export const CompositeButton: React.FC = ({active, label}) => {
     return (

@@ -10,12 +10,13 @@ export default {
 const Template : ComponentStory<typeof Button> = (args) => <Button {...args} />
 export const RED = Template.bind({})
 RED.args = {
-    active: false,
+    active: true,
     label: '책과 만나요 단계',
 };
 
 export const BLUE = Template.bind({})
 BLUE.args = {
+    active: true,
     activeType: 'blue',
     label: '책과 만나요 단계',
 }

@@ -1,18 +1,25 @@
 import React from "react";
-import styled, {css} from "styled-components";
 import {Composition, Box} from "atomic-layout";
-
-import {Button} from "./Button"
+import {StyledButtonWrapper, StyledFont, StyledButton} from "./styles/button"
 
 interface Props {
-
+    activeType: string
 }
 export const Buttons: React.FC<Props> = props => {
     return (
-        <Box flex justifyContent="center">
-            <Button key={0} label="책과 친해져요 단계"/>
-            <Button key={1} label="책과 생활해요 단계"/>
+        <StyledButtonWrapper>
+            <StyledFont/>
+            <Box flex justifyContent="center">
+                <StyledButton {...props}>{"책과 친해져요 단계"}</StyledButton>
+                <StyledButton {...props} active={true}>{"책과 생활해요 단계"}</StyledButton>
+                {/*<Button key={0} label="책과 친해져요 단계"/>*/}
+                {/*<Button key={1} label="책과 생활해요 단계"/>*/}
 
-        </Box>
+            </Box>
+        </StyledButtonWrapper>
     )
+}
+
+Buttons.defaultProps = {
+    activeType: "red",
 }

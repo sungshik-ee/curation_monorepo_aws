@@ -3,7 +3,6 @@ import { create } from '@storybook/theming';
 import { addDecorator} from "@storybook/react";
 import { withThemes} from "@react-theming/storybook-addon";
 import { ThemeProvider } from "styled-components";
-import { GridThemeProvider} from "styled-bootstrap-grid";
 
 const theme1 = create({
   base: 'light',

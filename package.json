@@ -8,9 +8,14 @@
     "packages/*"
   ],
   "scripts": {
-    "ui_dev": "lerna run storybook",
-    "mobile_dev": "lerna run dev",
-    "mobile_build": "lerna run build",
-    "legacy_dev": "lerna run books_start"
-  }
+    "mobile_dev": "yarn workspace @DanbiEduCorp/mobile dev",
+    "mobile_build": "yarn workspace @DanbiEduCorp/mobile build",
+    "mobile_start": "yarn workspace @DanbiEduCorp/mobile start",
+    "mobile_lint": "yarn workspace @DanbiEduCorp/mobile lint",
+    "ui_test": "yarn workspace @DanbiEduCorp/ui test",
+    "ui_dev": "yarn workspace @DanbiEduCorp/ui storybook",
+    "ui_build": "yarn workspace @DanbiEduCorp/ui build-storybook",
+    "legacy_dev": "yarn workspace wink_books start"
+  },
+  "packageManager": "yarn@3.2.0"
 }

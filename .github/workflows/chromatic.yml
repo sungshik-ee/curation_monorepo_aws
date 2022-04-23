@@ -24,9 +24,7 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
-      - name: Install packages
-        run: yarn install
-      - name: build application
+      - name: build application (zero-install)
         run: yarn ui_build
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action

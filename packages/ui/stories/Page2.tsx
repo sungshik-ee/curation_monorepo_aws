@@ -18,7 +18,7 @@ export const Page: React.FC = () => {
             />
 
             <section>
-                <h2>Pages in Storybook 20220423 06</h2>
+                <h2>Pages in Storybook 20220423 07</h2>
                 <p>
                     We recommend building UIs with a{' '}
                     <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">

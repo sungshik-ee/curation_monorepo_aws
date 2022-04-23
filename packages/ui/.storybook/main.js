@@ -10,5 +10,15 @@ module.exports = {
     "@react-theming/storybook-addon"
   ],
   "staticDirs": ["../public"],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
+  "webpackFinal": async (config, {configType}) => {
+    // Make whatever fine-grained changes you need
+    config.module.rules.push({
+      test: /\.(j|t)sx?$/,
+      use: ['babel-loader'],
+    });
+
+    // Return the altered config
+    return config;
+  }
 }

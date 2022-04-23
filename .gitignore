@@ -1,3 +1,13 @@
+#zero-installing
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+#zero-installing
+
 /node_modules/
 /.idea/
 /lerna-debug.log

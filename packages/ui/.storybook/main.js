@@ -11,6 +11,9 @@ module.exports = {
   ],
   "staticDirs": ["../public"],
   "framework": "@storybook/react",
+  "core": {
+    "builder": "@storybook/builder-webpack5"
+  },
   "webpackFinal": async (config, {configType}) => {
     // Make whatever fine-grained changes you need
     config.module.rules.push({

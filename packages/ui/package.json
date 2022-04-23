@@ -30,22 +30,34 @@
     "@babel/plugin-transform-shorthand-properties": "^7.16.7",
     "@babel/plugin-transform-spread": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@mdx-js/react": "^2.1.1",
+    "@react-theming/storybook-addon": "^1.1.5",
     "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-docs": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
+    "@storybook/addon-viewport": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
-    "@storybook/testing-library": "0.0.9",
-    "babel-loader": "^8.2.4",
+    "@storybook/testing-library": "^0.0.11",
+    "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-polyfill-corejs3": "^0.5.2",
     "chromatic": "^6.5.4",
-    "core-js": "^3.21.1"
+    "core-js": "^3.22.2",
+    "react-is": "^18.0.0"
   },
   "dependencies": {
+    "atomic-layout": "^0.16.2",
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
+    "styled-components": "^5.3.5"
   },
   "repository": {
     "url": "ssh://git@github.com:DanbiEduCorp/curation_monorepo.git"

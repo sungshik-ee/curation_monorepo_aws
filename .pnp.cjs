@@ -44,7 +44,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["core-js", "npm:3.22.2"],\
-            ["lerna", "npm:4.0.0"]\
+            ["lerna", "npm:4.0.0"],\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -19366,6 +19367,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.3.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.6.2", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.6.2-05918420da-48d08dde8e.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["pretty-error", [\
@@ -21122,7 +21130,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["root", "workspace:."],\
             ["core-js", "npm:3.22.2"],\
-            ["lerna", "npm:4.0.0"]\
+            ["lerna", "npm:4.0.0"],\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\

@@ -3,7 +3,8 @@
   "private": true,
   "devDependencies": {
     "core-js": "^3.22.2",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "prettier": "^2.6.2"
   },
   "workspaces": [
     "apps/*"

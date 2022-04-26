@@ -28,6 +28,7 @@ Custom.args = {
       { key: "A", label: "사과", activeType: "RED" },
       { key: "B", label: "오렌지", activeType: "BLUE" },
       { key: "C", label: "포도", activeType: "RED" },
+      { key: "G", label: "시금치", activeType: "BLUE" },
     ],
     [
       { key: "D", label: "당근", activeType: "RED" },

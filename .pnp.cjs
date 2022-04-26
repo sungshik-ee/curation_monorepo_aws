@@ -120,6 +120,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:18.0.0"],\
             ["react-icons", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:4.3.1"],\
             ["react-is", "npm:18.0.0"],\
+            ["storybook-addon-designs", "npm:6.2.1"],\
             ["styled-components", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:5.3.5"]\
           ],\
           "linkType": "SOFT"\
@@ -3118,6 +3119,40 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@figspec/components", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/@figspec-components-npm-1.0.1-119d3d41f4-db33333ad2.zip/node_modules/@figspec/components/",\
+          "packageDependencies": [\
+            ["@figspec/components", "npm:1.0.1"],\
+            ["lit", "npm:2.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@figspec/react", [\
+        ["npm:1.0.1", {\
+          "packageLocation": "./.yarn/cache/@figspec-react-npm-1.0.1-51aae9870c-9810cab7b6.zip/node_modules/@figspec/react/",\
+          "packageDependencies": [\
+            ["@figspec/react", "npm:1.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:1900398b7ab3192c43d6e1f08be503b2f041bc6bd41e59ddb136ee8602fea185d9a368881b2595c6622144119300bc586a54d5b7d80ddf241e9e000ea3020c1a#npm:1.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@figspec-react-virtual-c7aca22778/0/cache/@figspec-react-npm-1.0.1-51aae9870c-9810cab7b6.zip/node_modules/@figspec/react/",\
+          "packageDependencies": [\
+            ["@figspec/react", "virtual:1900398b7ab3192c43d6e1f08be503b2f041bc6bd41e59ddb136ee8602fea185d9a368881b2595c6622144119300bc586a54d5b7d80ddf241e9e000ea3020c1a#npm:1.0.1"],\
+            ["@figspec/components", "npm:1.0.1"],\
+            ["@lit-labs/react", "npm:1.0.4"],\
+            ["@types/react", null],\
+            ["react", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@gar/promisify", [\
         ["npm:1.1.3", {\
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
@@ -4127,6 +4162,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@lerna/write-log-file", "npm:4.0.0"],\
             ["npmlog", "npm:4.1.2"],\
             ["write-file-atomic", "npm:3.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@lit-labs/react", [\
+        ["npm:1.0.4", {\
+          "packageLocation": "./.yarn/cache/@lit-labs-react-npm-1.0.4-975fa4ea74-30bd15546f.zip/node_modules/@lit-labs/react/",\
+          "packageDependencies": [\
+            ["@lit-labs/react", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@lit/reactive-element", [\
+        ["npm:1.3.1", {\
+          "packageLocation": "./.yarn/cache/@lit-reactive-element-npm-1.3.1-21cbe105ae-6aea597555.zip/node_modules/@lit/reactive-element/",\
+          "packageDependencies": [\
+            ["@lit/reactive-element", "npm:1.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7999,6 +8052,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/testing-library__jest-dom", "npm:5.14.3"],\
             ["@types/jest", "npm:27.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/trusted-types", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-trusted-types-npm-2.0.2-035cb17c5e-3371eef5f1.zip/node_modules/@types/trusted-types/",\
+          "packageDependencies": [\
+            ["@types/trusted-types", "npm:2.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16597,6 +16659,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lit", [\
+        ["npm:2.2.2", {\
+          "packageLocation": "./.yarn/cache/lit-npm-2.2.2-0148bef4ac-786d5e493a.zip/node_modules/lit/",\
+          "packageDependencies": [\
+            ["lit", "npm:2.2.2"],\
+            ["@lit/reactive-element", "npm:1.3.1"],\
+            ["lit-element", "npm:3.2.0"],\
+            ["lit-html", "npm:2.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lit-element", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/lit-element-npm-3.2.0-e51df048f2-64bd0f05f7.zip/node_modules/lit-element/",\
+          "packageDependencies": [\
+            ["lit-element", "npm:3.2.0"],\
+            ["@lit/reactive-element", "npm:1.3.1"],\
+            ["lit-html", "npm:2.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lit-html", [\
+        ["npm:2.2.2", {\
+          "packageLocation": "./.yarn/cache/lit-html-npm-2.2.2-a75cfb8115-f5291201f4.zip/node_modules/lit-html/",\
+          "packageDependencies": [\
+            ["lit-html", "npm:2.2.2"],\
+            ["@types/trusted-types", "npm:2.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["load-json-file", [\
         ["npm:4.0.0", {\
           "packageLocation": "./.yarn/cache/load-json-file-npm-4.0.0-c9f09d85eb-8f5d6d93ba.zip/node_modules/load-json-file/",\
@@ -21988,6 +22083,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/store2-npm-2.13.2-3a5342d311-9e760ea2a7.zip/node_modules/store2/",\
           "packageDependencies": [\
             ["store2", "npm:2.13.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["storybook-addon-designs", [\
+        ["npm:6.2.1", {\
+          "packageLocation": "./.yarn/cache/storybook-addon-designs-npm-6.2.1-1900398b7a-0ea3ef4d1b.zip/node_modules/storybook-addon-designs/",\
+          "packageDependencies": [\
+            ["storybook-addon-designs", "npm:6.2.1"],\
+            ["@figspec/react", "virtual:1900398b7ab3192c43d6e1f08be503b2f041bc6bd41e59ddb136ee8602fea185d9a368881b2595c6622144119300bc586a54d5b7d80ddf241e9e000ea3020c1a#npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

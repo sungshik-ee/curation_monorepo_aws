@@ -1,45 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { Composition, Box } from "atomic-layout";
 import { StyledButtonWrapper, StyledFont, StyledButton } from "./styles/button";
-import { ActiveType } from "./types/button";
+import { BooksLevelType, ButtonsProps as Props } from "./types/button";
 
-const template = `
-  top
-  bottom
-`;
-interface Props {
-  activeType: ActiveType;
-}
-export const Buttons: React.FC<Props> = (props: JSX.IntrinsicAttributes) => {
+export const Buttons: React.FC<Props> = (props: Props) => {
+  const [selectedLevel, setSelectedLevel] = useState(props.selectedLevel);
+  const handleClick = (event, key: BooksLevelType) => {
+    event.preventDefault();
+    setSelectedLevel(key);
+    if (key !== selectedLevel) {
+      props.onSelect(key);
+    }
+  };
   return (
-    <Composition template={template} gap={6}>
-      {(Areas) => (
-        <>
-          <StyledFont />
-          <Areas.Top>
-            <StyledButtonWrapper>
-              <Box flex justifyContent="center">
-                <StyledButton {...props}>{"책과 친해져요 단계"}</StyledButton>
-                <StyledButton {...props} active={true}>
-                  {"책과 생활해요 단계"}
-                </StyledButton>
-              </Box>
-            </StyledButtonWrapper>
-          </Areas.Top>
-          <Areas.Bottom>
-            <StyledButtonWrapper>
-              <Box flex justifyContent="center">
-                <StyledButton {...props}>{"책과 친해져요 단계"}</StyledButton>
-                <StyledButton {...props}>{"책과 생활해요 단계"}</StyledButton>
-              </Box>
-            </StyledButtonWrapper>
-          </Areas.Bottom>
-        </>
-      )}
+    <Composition gap={6}>
+      <StyledFont />
+      {props.buttonSets.map((buttons) => (
+        <StyledButtonWrapper>
+          <Box flex justifyContent="center">
+            {buttons.map((button) => (
+              <StyledButton
+                activeType={button.activeType}
+                active={button.key === selectedLevel}
+                onClick={(event) => handleClick(event, button.key)}
+              >
+                {button.label}
+              </StyledButton>
+            ))}
+          </Box>
+        </StyledButtonWrapper>
+      ))}
     </Composition>
   );
 };
 
 Buttons.defaultProps = {
-  activeType: "RED",
+  selectedLevel: "RA",
+  buttonSets: [
+    [
+      { key: "RA", label: "책과 진해져요 단계", activeType: "RED" },
+      { key: "RB", label: "책과 생활해요 단계", activeType: "RED" },
+    ],
+    [
+      { key: "RT", label: "스스로 읽어요 단계", activeType: "RED" },
+      { key: "ALL", label: "도서 단계 모두 보기", activeType: "BLUE" },
+    ],
+  ],
 };

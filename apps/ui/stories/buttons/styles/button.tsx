@@ -1,5 +1,5 @@
-import styled, {css, createGlobalStyle} from "styled-components";
-import {Props, ActiveType} from '../types/button'
+import styled, { css, createGlobalStyle } from "styled-components";
+import { ButtonProps as Props, ActiveType } from "../types/button";
 
 export const StyledFont = createGlobalStyle`
     @font-face {
@@ -16,32 +16,36 @@ export const StyledButtonWrapper = styled.div`
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   font-size: 0.95rem;
-  
+
   min-width: 130px;
   padding: 0.3rem 0.3rem;
   margin: 0;
-  
+
   border-radius: 35.5px;
-  border-style: none;  
+  border-style: none;
 `;
 
 export const StyledButton = styled.button`
   background-color: #c9c9c9;
   ${(props: Props) => {
-    if(props.active && props.activeType === "RED") 
-      return css`background-image: linear-gradient(to top, #ec3068, #ea4a7a);`
-    if(props.active && props.activeType === "BLUE")
-      return css` background-image: linear-gradient(to right bottom, #649CE1, #0977FF);`
+    if (props.active && props.activeType === "RED")
+      return css`
+        background-image: linear-gradient(to top, #ec3068, #ea4a7a);
+      `;
+    if (props.active && props.activeType === "BLUE")
+      return css`
+        background-image: linear-gradient(to right bottom, #649ce1, #0977ff);
+      `;
   }}
   color: rgb(255, 255, 255);
 
   font-family: "yg-jalnan";
-  
+
   width: 100%;
-  
+
   padding: 0.6rem 0.8rem 0.4rem 0.8rem;
   margin: 0;
   border-radius: 32px;
   border-style: none;
   text-align: center;
-`
+`;

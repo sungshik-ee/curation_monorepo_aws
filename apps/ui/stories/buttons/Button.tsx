@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Composition, Box } from "atomic-layout";
+import React, { useState } from "react";
+import { Box } from "atomic-layout";
 
-import { StyledButtonWrapper, StyledFont, StyledButton } from "./styles/button";
-import { ActiveType, ButtonProps as Props } from "./types/button";
+import { StyledButton, StyledButtonWrapper, StyledFont } from "./styles/button";
+import { ButtonProps as Props } from "./types/button";
 
 export const Button: React.FC<Props> = (props: Props) => {
   const [active, setActive] = useState(props.active);

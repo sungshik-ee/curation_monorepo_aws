@@ -52,7 +52,8 @@
     "babel-plugin-polyfill-corejs3": "^0.5.2",
     "chromatic": "^6.5.4",
     "core-js": "^3.22.2",
-    "react-is": "^18.0.0"
+    "react-is": "^18.0.0",
+    "storybook-addon-designs": "^6.2.1"
   },
   "dependencies": {
     "atomic-layout": "^0.16.2",

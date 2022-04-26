@@ -9,6 +9,7 @@ module.exports = {
     "@storybook/addon-interactions",
     "@react-theming/storybook-addon",
     "@storybook/addon-storysource",
+    "storybook-addon-designs",
   ],
   staticDirs: ["../public"],
   framework: "@storybook/react",

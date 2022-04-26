@@ -101,6 +101,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/addon-essentials", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
             ["@storybook/addon-interactions", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
             ["@storybook/addon-links", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
+            ["@storybook/addon-storysource", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
             ["@storybook/addon-viewport", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
             ["@storybook/builder-webpack5", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
             ["@storybook/jest", "npm:0.0.10"],\
@@ -5527,6 +5528,46 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:18.0.0"],\
             ["regenerator-runtime", "npm:0.13.9"],\
             ["ts-dedent", "npm:2.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@storybook/addon-storysource", [\
+        ["npm:6.4.22", {\
+          "packageLocation": "./.yarn/cache/@storybook-addon-storysource-npm-6.4.22-d26d5ee653-eb14ed96de.zip/node_modules/@storybook/addon-storysource/",\
+          "packageDependencies": [\
+            ["@storybook/addon-storysource", "npm:6.4.22"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22", {\
+          "packageLocation": "./.yarn/__virtual__/@storybook-addon-storysource-virtual-19c48d9cb6/0/cache/@storybook-addon-storysource-npm-6.4.22-d26d5ee653-eb14ed96de.zip/node_modules/@storybook/addon-storysource/",\
+          "packageDependencies": [\
+            ["@storybook/addon-storysource", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:6.4.22"],\
+            ["@storybook/addons", "virtual:b7cb0bb314e8f0f66a5b37e0186b1dbcd32d302cd701bd3126b97520a911340ae0018ec1c005bd3debc509f81153d704c25b7f9f41327e3e5f71bf435a1cf239#npm:6.4.22"],\
+            ["@storybook/api", "virtual:b7cb0bb314e8f0f66a5b37e0186b1dbcd32d302cd701bd3126b97520a911340ae0018ec1c005bd3debc509f81153d704c25b7f9f41327e3e5f71bf435a1cf239#npm:6.4.22"],\
+            ["@storybook/client-logger", "npm:6.4.22"],\
+            ["@storybook/components", "virtual:b7cb0bb314e8f0f66a5b37e0186b1dbcd32d302cd701bd3126b97520a911340ae0018ec1c005bd3debc509f81153d704c25b7f9f41327e3e5f71bf435a1cf239#npm:6.4.22"],\
+            ["@storybook/router", "virtual:90d51c3bd3caa5eef1752667a210a10d4f1bc429f533db7398050ccd3807f6fbf46487c05707d3fea31c1c33d0025f61bf63953a8ce42cdaf2d04b1e637faf3e#npm:6.4.22"],\
+            ["@storybook/source-loader", "virtual:14d1cf7a3a8eba658431c129e4bc477733724fc1b7f88d9c85398d098dac254d0f7c2a4616a0084af709e3e3c28d22f15b99d55c9e75de169e2bbe8ff3705317#npm:6.4.22"],\
+            ["@storybook/theming", "virtual:b7cb0bb314e8f0f66a5b37e0186b1dbcd32d302cd701bd3126b97520a911340ae0018ec1c005bd3debc509f81153d704c25b7f9f41327e3e5f71bf435a1cf239#npm:6.4.22"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["core-js", "npm:3.22.2"],\
+            ["estraverse", "npm:5.3.0"],\
+            ["loader-utils", "npm:2.0.2"],\
+            ["prettier", "npm:2.3.0"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.0.0"],\
+            ["react-dom", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:18.0.0"],\
+            ["react-syntax-highlighter", "virtual:08faa9eff0082060de9019f5e8c67f6a0f60ec3d81f55739957464173d0ba32ce1d6260c77448c95e13a1f9031e76897bacd8af3d5b795bd044a32f59e2a465f#npm:13.5.3"],\
+            ["regenerator-runtime", "npm:0.13.9"]\
           ],\
           "packagePeers": [\
             "@types/react-dom",\

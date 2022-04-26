@@ -53,6 +53,7 @@ __metadata:
     "@storybook/addon-essentials": ^6.4.22
     "@storybook/addon-interactions": ^6.4.22
     "@storybook/addon-links": ^6.4.22
+    "@storybook/addon-storysource": ^6.4.22
     "@storybook/addon-viewport": ^6.4.22
     "@storybook/builder-webpack5": ^6.4.22
     "@storybook/jest": ^0.0.10
@@ -3683,6 +3684,36 @@ __metadata:
     react-dom:
       optional: true
   checksum: 34e8b32b1c9ce3896b365d5d6afb83ad018108260e221f3e64e386f82285de921ef4b025fc88a57c7e2b270ad39b77b40467762933cde36475b9c20bf6048b10
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-storysource@npm:^6.4.22":
+  version: 6.4.22
+  resolution: "@storybook/addon-storysource@npm:6.4.22"
+  dependencies:
+    "@storybook/addons": 6.4.22
+    "@storybook/api": 6.4.22
+    "@storybook/client-logger": 6.4.22
+    "@storybook/components": 6.4.22
+    "@storybook/router": 6.4.22
+    "@storybook/source-loader": 6.4.22
+    "@storybook/theming": 6.4.22
+    core-js: ^3.8.2
+    estraverse: ^5.2.0
+    loader-utils: ^2.0.0
+    prettier: ">=2.2.1 <=2.3.0"
+    prop-types: ^15.7.2
+    react-syntax-highlighter: ^13.5.3
+    regenerator-runtime: ^0.13.7
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: eb14ed96de52b6b76c56e2c45b6925524dbcdc13b86fe84d3c81d26cf7172fcbcb1a538cf7fc833467b73399988b5eb68f52d24366e2f150c4d159812ec6467b
   languageName: node
   linkType: hard
 

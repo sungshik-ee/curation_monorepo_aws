@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Composition, Box } from "atomic-layout";
-import { StyledButtonWrapper, StyledFont, StyledButton } from "./styles/button";
+import {
+  StyledButtonWrapper,
+  StyledYgFont as StyledFont,
+  StyledButton,
+} from "./styles/button";
 import { BooksLevelType, ButtonsProps as Props } from "./types/button";
 
 export const Buttons: React.FC<Props> = (props: Props) => {

@@ -3,6 +3,7 @@
     "esModuleInterop": true,
     "jsx": "react",
     "lib": ["es2015"],
-    "strictBindCallApply": true
+    "strictBindCallApply": true,
+    "typeRoots": ["./node_modules/@types", "@types"]
   }
 }

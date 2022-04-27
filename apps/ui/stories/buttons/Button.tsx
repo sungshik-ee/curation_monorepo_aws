@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Box } from "atomic-layout";
 
-import { StyledButton, StyledButtonWrapper, StyledFont } from "./styles/button";
+import {
+  StyledButton,
+  StyledButtonWrapper,
+  StyledYgFont as StyledFont,
+} from "./styles/button";
 import { ButtonProps as Props } from "./types/button";
 
 export const Button: React.FC<Props> = (props: Props) => {

@@ -1,13 +1,30 @@
 import styled, { css, createGlobalStyle } from "styled-components";
 import { ButtonProps as Props, ActiveType } from "../types/button";
 
-export const StyledFont = createGlobalStyle`
+export const StyledYgFont = createGlobalStyle`
     @font-face {
         font-family: "yg-jalnan";
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
         font-weight: 300;
         font-style: normal;
     }
+`;
+
+export const StyledGmarketFont = createGlobalStyle`
+  @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+`;
+export const StyledGmarketBoldFont = createGlobalStyle`
+  @font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 `;
 
 export const StyledButtonWrapper = styled.div`

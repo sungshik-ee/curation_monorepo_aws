@@ -1,23 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "packageManager": "yarn@3.2.0",
   "devDependencies": {
     "core-js": "^3.22.2",
     "lerna": "^4.0.0",
     "prettier": "^2.6.2"
-  },
-  "workspaces": [
-    "apps/*"
-  ],
-  "scripts": {
-    "mobile_dev": "yarn workspace @DanbiEduCorp/mobile dev",
-    "mobile_build": "yarn workspace @DanbiEduCorp/mobile build",
-    "mobile_start": "yarn workspace @DanbiEduCorp/mobile start",
-    "mobile_lint": "yarn workspace @DanbiEduCorp/mobile lint",
-    "ui_test": "yarn workspace @DanbiEduCorp/ui test",
-    "ui_dev": "yarn workspace @DanbiEduCorp/ui storybook",
-    "ui_build": "yarn workspace @DanbiEduCorp/ui build-storybook",
-    "legacy_dev": "yarn workspace wink_books start"
-  },
-  "packageManager": "yarn@3.2.0"
+  }
 }

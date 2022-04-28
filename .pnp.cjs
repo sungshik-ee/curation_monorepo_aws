@@ -118,6 +118,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:18.1.0"],\
+            ["react-hook-form", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.30.0"],\
             ["react-icons", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:4.3.1"],\
             ["react-is", "npm:18.1.0"],\
             ["storybook-addon-designs", "npm:6.2.1"],\
@@ -20254,6 +20255,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-hook-form", [\
+        ["npm:7.30.0", {\
+          "packageLocation": "./.yarn/cache/react-hook-form-npm-7.30.0-dd0d4e71a9-7af442c80e.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "npm:7.30.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.30.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-b129b51864/0/cache/react-hook-form-npm-7.30.0-dd0d4e71a9-7af442c80e.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.30.0"],\
+            ["@types/react", null],\
+            ["react", "npm:18.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\

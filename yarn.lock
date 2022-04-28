@@ -70,6 +70,7 @@ __metadata:
     prop-types: ^15.8.1
     react: ^18.1.0
     react-dom: ^18.1.0
+    react-hook-form: ^7.30.0
     react-icons: ^4.3.1
     react-is: ^18.1.0
     storybook-addon-designs: ^6.2.1
@@ -15684,6 +15685,15 @@ __metadata:
     react: ^16.6.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.6.0 || ^17.0.0 || ^18.0.0
   checksum: 7ca7e47f8af14ea186688b512a87ab912bf6041312b297f92516341b140b3f0f8aedf5a44d226d99e69ed067b0cc106e38aeb9c9b738ffcc63d10721c844db90
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.30.0":
+  version: 7.30.0
+  resolution: "react-hook-form@npm:7.30.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 7af442c80e1d8e04b6345f4f46177974d82488e81cc12b165d6ff1c69ba0f6234bd2ef0f7b51dda34f77b36fe74464815bbb0f4c77dc2cd9793f8e89d528ae25
   languageName: node
   linkType: hard
 

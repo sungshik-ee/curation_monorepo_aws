@@ -6,6 +6,7 @@
   ],
   "packageManager": "yarn@3.2.0",
   "devDependencies": {
+    "@types/node": "^17.0.31",
     "core-js": "^3.22.2",
     "lerna": "^4.0.0",
     "prettier": "^2.6.2"

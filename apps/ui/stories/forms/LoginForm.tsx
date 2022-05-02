@@ -1,8 +1,10 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useCallback } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import axios from 'axios';
 import { Composition, Box } from 'atomic-layout';
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { StyledInput as BaseStyledInput } from './styles/input';
+import { useMutation } from 'react-query';
 
 enum Gender {
     female = 'female',
@@ -19,7 +21,7 @@ type FormInput = {
 type Props = {};
 
 const StyledInput = styled(BaseStyledInput)`
-    border-color: orange;
+    //border-color: red;
 `;
 
 export const LoginForm: FC<Props> = (props: Props) => {
@@ -28,9 +30,20 @@ export const LoginForm: FC<Props> = (props: Props) => {
         handleSubmit,
         formState: { errors },
     } = useForm<FormInput>();
-    const onSubmit: SubmitHandler<FormInput> = (data) => {
-        // console.log(data);
-    };
+
+    const mutation = useMutation((data) => axios.post('/accounts/authenticate/', data), {
+        onSuccess: () => {},
+        onError: () => {},
+        onSettled: () => {},
+    });
+
+    const onSubmit: SubmitHandler<FormInput> = useCallback(
+        (data) => {
+            console.log(data);
+            mutation.mutate(data);
+        },
+        [mutation]
+    );
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Composition gap={12}>
@@ -39,7 +52,7 @@ export const LoginForm: FC<Props> = (props: Props) => {
                     placeholder="WINK 통합 아이디 입력"
                 />
                 {errors.id?.type === 'required' && '아이디는 필수입력 항목입니다.'}
-                <BaseStyledInput
+                <StyledInput
                     {...register('password', { required: true })}
                     type="password"
                     placeholder="비밀번호"

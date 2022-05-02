@@ -1,10 +1,10 @@
 import React, { FC, useState, useCallback } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import axios from 'axios';
 import { Composition, Box } from 'atomic-layout';
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { StyledInput as BaseStyledInput } from './styles/input';
 import { useMutation } from 'react-query';
+import { getAxios } from '@DanbiEduCorp/core/src/axios';
 
 enum Gender {
     female = 'female',
@@ -31,7 +31,7 @@ export const LoginForm: FC<Props> = (props: Props) => {
         formState: { errors },
     } = useForm<FormInput>();
 
-    const mutation = useMutation((data) => axios.post('/accounts/authenticate/', data), {
+    const mutation = useMutation((data) => getAxios().post('/accounts/authenticate/', data), {
         onSuccess: () => {},
         onError: () => {},
         onSettled: () => {},

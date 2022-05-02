@@ -58,6 +58,7 @@
     "storybook-axios": "^1.0.1"
   },
   "dependencies": {
+    "@DanbiEduCorp/core": "workspaces:*",
     "atomic-layout": "^0.16.2",
     "axios": "^0.27.2",
     "prop-types": "^15.8.1",

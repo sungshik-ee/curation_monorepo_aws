@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
     stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
     addons: [
@@ -21,6 +22,7 @@ module.exports = {
         config.module.rules.push({
             test: /\.(j|t)sx?$/,
             use: ['babel-loader'],
+            include: [path.join(__dirname, '../core')],
         });
 
         // Return the altered config

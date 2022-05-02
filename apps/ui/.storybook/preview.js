@@ -1,3 +1,4 @@
+import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { create } from '@storybook/theming';
 import { addDecorator } from '@storybook/react';
@@ -6,9 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import withAxiosDecorator from 'storybook-axios';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-// import { getAxios } from '@DanbiEduCorp/core/src/axios';
-import axios from 'axios';
-import React from 'react';
+import { getAxios } from '@DanbiEduCorp/core/src/axios';
 
 const theme1 = create({
     base: 'light',
@@ -19,15 +18,11 @@ const theme2 = create({
     brandTitle: 'Styled Component Theme',
 });
 
-const axiosInstance = axios.create({
-    // TODO : env로 설정
-    baseURL: 'http://server.local.danbi:8080',
-});
 const queryClient = new QueryClient();
 
 addDecorator(withThemes(ThemeProvider, [theme1, theme2]));
 
-addDecorator(withAxiosDecorator(axiosInstance));
+addDecorator(withAxiosDecorator(getAxios()));
 
 addDecorator((story) => (
     <QueryClientProvider client={queryClient}>

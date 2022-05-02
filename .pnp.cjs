@@ -21,6 +21,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."\
       },\
       {\
+        "name": "@DanbiEduCorp/core",\
+        "reference": "workspace:apps/core"\
+      },\
+      {\
         "name": "@DanbiEduCorp/mobile",\
         "reference": "workspace:apps/mobile"\
       },\
@@ -32,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["@DanbiEduCorp/core", ["workspace:apps/core"]],\
       ["@DanbiEduCorp/mobile", ["workspace:apps/mobile"]],\
       ["@DanbiEduCorp/ui", ["workspace:apps/ui"]],\
       ["root", ["workspace:."]]\
@@ -47,6 +52,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["core-js", "npm:3.22.2"],\
             ["lerna", "npm:4.0.0"],\
             ["prettier", "npm:2.6.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@DanbiEduCorp/core", [\
+        ["workspace:apps/core", {\
+          "packageLocation": "./apps/core/",\
+          "packageDependencies": [\
+            ["@DanbiEduCorp/core", "workspace:apps/core"],\
+            ["@types/react", "npm:18.0.8"],\
+            ["axios", "npm:0.27.2"],\
+            ["react", "npm:18.1.0"],\
+            ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -75,6 +93,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./apps/ui/",\
           "packageDependencies": [\
             ["@DanbiEduCorp/ui", "workspace:apps/ui"],\
+            ["@DanbiEduCorp/core", "workspace:apps/core"],\
             ["@babel/core", "npm:7.17.9"],\
             ["@babel/plugin-proposal-class-properties", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.16.7"],\
             ["@babel/plugin-proposal-decorators", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.17.9"],\

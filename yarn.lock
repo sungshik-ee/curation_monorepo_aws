@@ -5,6 +5,17 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@DanbiEduCorp/core@workspace:apps/core, @DanbiEduCorp/core@workspaces:*":
+  version: 0.0.0-use.local
+  resolution: "@DanbiEduCorp/core@workspace:apps/core"
+  dependencies:
+    "@types/react": ^18.0.8
+    axios: ^0.27.2
+    react: ^18.1.0
+    typescript: ^4.6.4
+  languageName: unknown
+  linkType: soft
+
 "@DanbiEduCorp/mobile@workspace:apps/mobile":
   version: 0.0.0-use.local
   resolution: "@DanbiEduCorp/mobile@workspace:apps/mobile"
@@ -26,6 +37,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@DanbiEduCorp/ui@workspace:apps/ui"
   dependencies:
+    "@DanbiEduCorp/core": "workspaces:*"
     "@babel/core": ^7.17.9
     "@babel/plugin-proposal-class-properties": ^7.16.7
     "@babel/plugin-proposal-decorators": ^7.17.9
@@ -19100,7 +19112,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.1.3, typescript@npm:^4.6.3":
+"typescript@npm:^4.1.3, typescript@npm:^4.6.3, typescript@npm:^4.6.4":
   version: 4.6.4
   resolution: "typescript@npm:4.6.4"
   bin:
@@ -19110,7 +19122,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.6.4
   resolution: "typescript@patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"
   bin:

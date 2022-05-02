@@ -1,5 +1,5 @@
-import styled, { css, createGlobalStyle } from "styled-components";
-import { ButtonProps as Props, ActiveType } from "../types/button";
+import styled, { css, createGlobalStyle } from 'styled-components';
+import { ButtonProps as Props, ActiveType } from '../types/button';
 
 export const StyledYgFont = createGlobalStyle`
     @font-face {
@@ -28,41 +28,41 @@ export const StyledGmarketBoldFont = createGlobalStyle`
 `;
 
 export const StyledButtonWrapper = styled.div`
-  background-color: #c9c9c9;
-  box-shadow: inset 3px 3px 7px 0 rgba(6, 0, 1, 0.21);
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  font-size: 0.95rem;
+    background-color: #c9c9c9;
+    box-shadow: inset 3px 3px 7px 0 rgba(6, 0, 1, 0.21);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 0.95rem;
 
-  min-width: 130px;
-  padding: 0.3rem 0.3rem;
-  margin: 0;
+    min-width: 130px;
+    padding: 0.3rem 0.3rem;
+    margin: 0;
 
-  border-radius: 35.5px;
-  border-style: none;
+    border-radius: 35.5px;
+    border-style: none;
 `;
 
 export const StyledButton = styled.button`
-  background-color: #c9c9c9;
-  ${(props: Props) => {
-    if (props.active && props.activeType === "RED")
-      return css`
-        background-image: linear-gradient(to top, #ec3068, #ea4a7a);
-      `;
-    if (props.active && props.activeType === "BLUE")
-      return css`
-        background-image: linear-gradient(to right bottom, #649ce1, #0977ff);
-      `;
-  }}
-  color: rgb(255, 255, 255);
+    background-color: #c9c9c9;
+    ${(props: Props) => {
+        if (props.active && props.activeType === 'RED')
+            return css`
+                background-image: linear-gradient(to top, #ec3068, #ea4a7a);
+            `;
+        if (props.active && props.activeType === 'BLUE')
+            return css`
+                background-image: linear-gradient(to right bottom, #649ce1, #0977ff);
+            `;
+    }}
+    color: rgb(255, 255, 255);
 
-  font-family: "yg-jalnan";
+    font-family: 'yg-jalnan';
 
-  width: 100%;
+    width: 100%;
 
-  padding: 0.6rem 0.8rem 0.4rem 0.8rem;
-  margin: 0;
-  border-radius: 32px;
-  border-style: none;
-  text-align: center;
+    padding: 0.6rem 0.8rem 0.4rem 0.8rem;
+    margin: 0;
+    border-radius: 32px;
+    border-style: none;
+    text-align: center;
 `;

@@ -8,4 +8,4 @@ const axiosInstance = axios.create({
     // baseURL: process.env.REACT_APP_API_URL,
 });
 
-export const getAxios = () => axiosInstance;
+export const useAxios = () => axiosInstance;

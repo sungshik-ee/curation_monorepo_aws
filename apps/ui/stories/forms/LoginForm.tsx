@@ -1,10 +1,10 @@
-import React, { FC, useState, useCallback } from 'react';
+import React, { FC, useState, useEffect, useCallback } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Composition, Box } from 'atomic-layout';
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { StyledInput as BaseStyledInput } from './styles/input';
-import { useMutation } from 'react-query';
-import { getAxios } from '@DanbiEduCorp/core/src/axios';
+import { useMutation, useQueryClient } from 'react-query';
+import { useAxios } from '@DanbiEduCorp/core/src/axios';
 
 enum Gender {
     female = 'female',
@@ -20,50 +20,72 @@ type FormInput = {
 
 type Props = {};
 
+type Auth = {
+    id: number;
+};
+
 const StyledInput = styled(BaseStyledInput)`
     //border-color: red;
 `;
 
-function useLogin() {
-    return useMutation((data) =>
-        getAxios()
-            .post('/account/auths/authenticate/', data)
-            .then((docs) => console.log(docs.data))
-            .catch((err) => console.log(err))
+function useAuthenticate() {
+    return useMutation(
+        (data) =>
+            useAxios()
+                .post('/account/auths/authenticate/', data)
+                .then((docs) => docs.data)
+        // 여기에 catch를 호출하면 mutation에서 onSuccess를 호출함
+        // .catch((err) => console.log(err))
     );
 }
-
+function useLogin() {
+    return useMutation((params: Auth) =>
+        useAxios()
+            .post(`/account/auths/${params.id}/login_actor/`, { actor_type: 4 })
+            .then((docs) => docs.data)
+    );
+}
 export const LoginForm: FC<Props> = (props: Props) => {
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<FormInput>();
+    const [auth, setAuth] = useState();
 
-    const mutation = useLogin();
+    const authMutation = useAuthenticate();
+    const loginMutation = useLogin();
+    const queryClient = useQueryClient();
 
-    // const mutation = useMutation((data) => getAxios().post('/account/auths/authenticate/', data), {
-    //     onSuccess: (docs) => {
-    //         console.log(docs.data);
-    //     },
-    //     onError: () => {},
-    //     onSettled: () => {},
-    // });
+    const onSubmit: SubmitHandler<FormInput> = useCallback(async (params) => {
+        await authMutation
+            .mutateAsync(params)
+            .then(async (data) => {
+                await queryClient.setQueryData(['profileAuth'], data);
+                return loginMutation.mutateAsync(data);
+            })
+            .then(async (data) => {
+                console.log(data);
+                await queryClient.setQueryData(['profileActor'], data);
+            });
+        // authMutation.mutate(params, {
+        //     onSuccess: (data) => {
+        //         console.log('정상!', data);
+        //         setAuth(data);
+        //     },
+        //     onError: (err) => {
+        //         console.log('오류!', err);
+        //         setAuth();
+        //     },
+        // });
+    }, []);
 
-    // const mutation = useMutation((data) =>
-    //     getAxios()
-    //         .post('/account/auths/authenticate/', data)
-    //         .then((docs) => console.log(docs.data))
-    //         .catch((err) => console.log(err))
-    // );
-
-    const onSubmit: SubmitHandler<FormInput> = useCallback(
-        (params) => {
-            const data = mutation.mutate(params);
-            console.log(data);
-        },
-        [mutation]
-    );
+    useEffect(() => {
+        if (!auth) {
+            return;
+        }
+        console.log(auth);
+    }, [auth]);
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Composition gap={12}>

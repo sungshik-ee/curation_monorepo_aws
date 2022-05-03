@@ -13,7 +13,7 @@ enum Gender {
 }
 
 type FormInput = {
-    id: string;
+    username: string;
     password: string;
     gender: Gender;
 };
@@ -24,6 +24,15 @@ const StyledInput = styled(BaseStyledInput)`
     //border-color: red;
 `;
 
+function useLogin() {
+    return useMutation((data) =>
+        getAxios()
+            .post('/account/auths/authenticate/', data)
+            .then((docs) => console.log(docs.data))
+            .catch((err) => console.log(err))
+    );
+}
+
 export const LoginForm: FC<Props> = (props: Props) => {
     const {
         register,
@@ -31,16 +40,27 @@ export const LoginForm: FC<Props> = (props: Props) => {
         formState: { errors },
     } = useForm<FormInput>();
 
-    const mutation = useMutation((data) => getAxios().post('/accounts/authenticate/', data), {
-        onSuccess: () => {},
-        onError: () => {},
-        onSettled: () => {},
-    });
+    const mutation = useLogin();
+
+    // const mutation = useMutation((data) => getAxios().post('/account/auths/authenticate/', data), {
+    //     onSuccess: (docs) => {
+    //         console.log(docs.data);
+    //     },
+    //     onError: () => {},
+    //     onSettled: () => {},
+    // });
+
+    // const mutation = useMutation((data) =>
+    //     getAxios()
+    //         .post('/account/auths/authenticate/', data)
+    //         .then((docs) => console.log(docs.data))
+    //         .catch((err) => console.log(err))
+    // );
 
     const onSubmit: SubmitHandler<FormInput> = useCallback(
-        (data) => {
+        (params) => {
+            const data = mutation.mutate(params);
             console.log(data);
-            mutation.mutate(data);
         },
         [mutation]
     );
@@ -48,10 +68,10 @@ export const LoginForm: FC<Props> = (props: Props) => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <Composition gap={12}>
                 <StyledInput
-                    {...register('id', { required: true })}
+                    {...register('username', { required: true })}
                     placeholder="WINK 통합 아이디 입력"
                 />
-                {errors.id?.type === 'required' && '아이디는 필수입력 항목입니다.'}
+                {errors.username?.type === 'required' && '아이디는 필수입력 항목입니다.'}
                 <StyledInput
                     {...register('password', { required: true })}
                     type="password"
@@ -59,12 +79,12 @@ export const LoginForm: FC<Props> = (props: Props) => {
                 />
             </Composition>
 
-            <label>성별</label>
-            <select {...register('gender')}>
-                <option value="female">여자</option>
-                <option value="male">남자</option>
-                <option value="other">기타</option>
-            </select>
+            {/*<label>성별</label>*/}
+            {/*<select {...register('gender')}>*/}
+            {/*    <option value="female">여자</option>*/}
+            {/*    <option value="male">남자</option>*/}
+            {/*    <option value="other">기타</option>*/}
+            {/*</select>*/}
             <button type="submit">확인</button>
             <input type="submit" />
         </form>

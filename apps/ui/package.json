@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test --setupFiles ./.storybook/setupFiles.js",
-    "storybook": "start-storybook -p 3000",
+    "storybook": "start-storybook -p 3001",
     "build-storybook": "build-storybook"
   },
   "keywords": [],
@@ -47,6 +47,10 @@
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
     "@storybook/testing-react": "^1.2.4",
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "@types/styled-components": "^5.1.25",
     "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-polyfill-corejs3": "^0.5.2",

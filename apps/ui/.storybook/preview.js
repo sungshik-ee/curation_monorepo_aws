@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import withAxiosDecorator from 'storybook-axios';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { getAxios } from '@DanbiEduCorp/core/src/axios';
+import { useAxios } from '@DanbiEduCorp/core/src/axios';
 
 const theme1 = create({
     base: 'light',
@@ -22,7 +22,7 @@ const queryClient = new QueryClient();
 
 addDecorator(withThemes(ThemeProvider, [theme1, theme2]));
 
-addDecorator(withAxiosDecorator(getAxios()));
+addDecorator(withAxiosDecorator(useAxios()));
 
 addDecorator((story) => (
     <QueryClientProvider client={queryClient}>

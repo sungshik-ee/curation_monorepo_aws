@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect, useCallback } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, UnpackNestedValue } from 'react-hook-form';
 import { Composition, Box } from 'atomic-layout';
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { StyledInput as BaseStyledInput } from './styles/input';
@@ -30,7 +30,8 @@ const StyledInput = styled(BaseStyledInput)`
 
 function useAuthenticate() {
     return useMutation(
-        (data) =>
+        // TODO : 타입 구체화
+        (data: any) =>
             useAxios()
                 .post('/account/auths/authenticate/', data)
                 .then((docs) => docs.data)
@@ -51,11 +52,11 @@ export const LoginForm: FC<Props> = (props: Props) => {
         handleSubmit,
         formState: { errors },
     } = useForm<FormInput>();
-    const [auth, setAuth] = useState();
+    // const [auth, setAuth] = useState();
 
+    const queryClient = useQueryClient();
     const authMutation = useAuthenticate();
     const loginMutation = useLogin();
-    const queryClient = useQueryClient();
 
     const onSubmit: SubmitHandler<FormInput> = useCallback(async (params) => {
         await authMutation
@@ -80,12 +81,12 @@ export const LoginForm: FC<Props> = (props: Props) => {
         // });
     }, []);
 
-    useEffect(() => {
-        if (!auth) {
-            return;
-        }
-        console.log(auth);
-    }, [auth]);
+    // useEffect(() => {
+    //     if (!auth) {
+    //         return;
+    //     }
+    //     console.log(auth);
+    // }, [auth]);
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Composition gap={12}>

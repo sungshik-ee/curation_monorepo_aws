@@ -13,9 +13,17 @@
   },
   "versionGroups": [
     {
-      "dependencies": ["react", "react-dom"],
-      "devDependencies": ["@types/react", "@types/react-dom"],
-      "packages": ["**"]
+      "dependencies": [
+        "react",
+        "react-dom"
+      ],
+      "devDependencies": [
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "packages": [
+        "**"
+      ]
     }
   ]
 }

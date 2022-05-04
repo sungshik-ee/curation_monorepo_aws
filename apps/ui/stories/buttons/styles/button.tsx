@@ -44,16 +44,19 @@ export const StyledButtonWrapper = styled.div`
 
 export const StyledButton = styled.button`
     background-color: #c9c9c9;
-    ${(props: Props) => {
-        if (props.active && props.activeType === 'RED')
-            return css`
-                background-image: linear-gradient(to top, #ec3068, #ea4a7a);
-            `;
-        if (props.active && props.activeType === 'BLUE')
-            return css`
-                background-image: linear-gradient(to right bottom, #649ce1, #0977ff);
-            `;
-    }}
+    ${(props: Props) =>
+        props.active
+            ? props.activeType === 'RED'
+                ? css`
+                      background-image: linear-gradient(to top, #ec3068, #ea4a7a);
+                  `
+                : props.activeType === 'BLUE'
+                ? css`
+                      background-image: linear-gradient(to right bottom, #649ce1, #0977ff);
+                  `
+                : undefined
+            : undefined}
+
     color: rgb(255, 255, 255);
 
     font-family: 'yg-jalnan';

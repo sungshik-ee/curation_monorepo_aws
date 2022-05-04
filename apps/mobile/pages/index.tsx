@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Album } from '@DanbiEduCorp/ui/stories/album/Album';
-import { LoginForm } from '@DanbiEduCorp/ui/stories/forms/LoginForm';
 
 const Home: NextPage = () => {
     return (
@@ -14,7 +13,6 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Album image="./test/png" title="Around the World" author="kyo" info="2022-04-11" />
-            <LoginForm />
 
             <main className={styles.main}>
                 <h1 className={styles.title}>

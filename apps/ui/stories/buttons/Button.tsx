@@ -6,8 +6,7 @@ import { ButtonProps as Props } from './types/button';
 
 export const Button: React.FC<Props> = (props: Props) => {
     const [active, setActive] = useState(props.active);
-    const handleClick = (event) => {
-        event.preventDefault();
+    const handleClick = () => {
         const value = !active;
         setActive(value);
         props.onClick(value);

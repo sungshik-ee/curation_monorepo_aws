@@ -1,19 +1,22 @@
 import React from 'react';
-import { LoginForm } from './LoginForm';
 
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { within, userEvent } from '@storybook/testing-library';
+
+import { LoginForm } from './LoginForm';
 
 export default {
     title: 'Forms/Login',
     component: LoginForm,
     argTypes: {
-        onSelect: { action: '선택 변경됨' },
+        onSubmit: { action: '로그인 시도됨' },
     },
 } as ComponentMeta<typeof LoginForm>;
 
 const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-    selectedLevel: 'RA',
+Default.args = {};
+Default.play = async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
 };

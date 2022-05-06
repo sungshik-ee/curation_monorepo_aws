@@ -5,7 +5,7 @@ import { BooksLevelType, ButtonsProps as Props } from './types/button';
 
 export const Buttons: React.FC<Props> = (props: Props) => {
     const [selectedLevel, setSelectedLevel] = useState(props.selectedLevel);
-    const handleClick = (key: BooksLevelType) => {
+    const handleClick = (key: string) => {
         setSelectedLevel(key);
         if (key !== selectedLevel) {
             props.onSelect(key);
@@ -17,14 +17,14 @@ export const Buttons: React.FC<Props> = (props: Props) => {
             {props.buttonSets.map((buttons) => (
                 <StyledButtonWrapper>
                     <Box flex justifyContent="center">
-                        {buttons.map((button) => (
+                        {buttons.map((button, inx) => (
                             <StyledButton
+                                key={inx}
                                 activeType={button.activeType}
                                 active={button.key === selectedLevel}
                                 onClick={(event) => handleClick(button.key)}
-                            >
-                                {button.label}
-                            </StyledButton>
+                                label={button.label}
+                            />
                         ))}
                     </Box>
                 </StyledButtonWrapper>

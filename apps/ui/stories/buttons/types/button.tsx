@@ -10,7 +10,8 @@ export interface ButtonProps {
 }
 
 export type BooksLevelButtonType = {
-    key: BooksLevelType;
+    // key: BooksLevelType;
+    key: string;
     label: string;
     activeType: ActiveType;
 };
@@ -18,5 +19,5 @@ export type BooksLevelButtonType = {
 export type ButtonsProps = {
     selectedLevel: string;
     buttonSets: Array<Array<BooksLevelButtonType>>;
-    onSelect: (level: BooksLevelType) => void;
+    onSelect: (level: string) => void;
 };

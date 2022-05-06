@@ -42,7 +42,7 @@ export const StyledButtonWrapper = styled.div`
     border-style: none;
 `;
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<Props>`
     background-color: #c9c9c9;
     ${(props: Props) =>
         props.active

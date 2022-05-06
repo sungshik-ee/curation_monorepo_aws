@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "react-scripts test --setupFiles ./.storybook/setupFiles.js",
+    "test": "test-storybook --verbose",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -32,6 +32,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@jest/types": "^27.5.1",
     "@mdx-js/react": "^2.1.1",
     "@react-theming/storybook-addon": "^1.1.5",
     "@storybook/addon-actions": "^6.4.22",
@@ -42,11 +43,14 @@
     "@storybook/addon-storysource": "^6.4.22",
     "@storybook/addon-viewport": "^6.4.22",
     "@storybook/builder-webpack5": "^6.4.22",
+    "@storybook/core-common": "^6.4.22",
+    "@storybook/csf-tools": "^6.4.22",
     "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.4.22",
     "@storybook/react": "^6.4.22",
+    "@storybook/store": "^6.4.22",
+    "@storybook/test-runner": "^0.0.8",
     "@storybook/testing-library": "^0.0.11",
-    "@storybook/testing-react": "^1.2.4",
     "@types/node": "^17.0.31",
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.3",
@@ -56,8 +60,17 @@
     "babel-plugin-polyfill-corejs3": "^0.5.2",
     "chromatic": "^6.5.4",
     "core-js": "^3.22.2",
+    "expect-playwright": "^0.8.0",
+    "global": "^4.4.0",
+    "jest": "^27.5.1",
+    "jest-environment-node": "^27.5.1",
+    "jest-playwright-preset": "^1.7.0",
+    "jest-runner": "^27.5.1",
+    "playwright": "^1.21.1",
+    "playwright-chromium": "^1.21.1",
     "react-is": "^18.1.0",
     "react-query-devtools": "^2.6.3",
+    "regenerator-runtime": "^0.13.9",
     "storybook-addon-designs": "^6.2.1",
     "storybook-axios": "^1.0.1"
   },
@@ -69,6 +82,12 @@
     "react-hook-form": "^7.30.0",
     "react-icons": "^4.3.1",
     "styled-components": "^5.3.5"
+  },
+  "jest": {
+    "preset": "jest-playwright-preset",
+    "setupFilesAfterEnv": [
+      "expect-playwright"
+    ]
   },
   "repository": {
     "url": "ssh://git@github.com:DanbiEduCorp/curation_monorepo.git"

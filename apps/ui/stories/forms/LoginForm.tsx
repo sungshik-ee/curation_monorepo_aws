@@ -2,6 +2,7 @@ import React, { FC, useCallback } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Composition } from 'atomic-layout';
 import styled from 'styled-components';
+import _ from 'lodash';
 import { StyledInput as BaseStyledInput } from './styles/input';
 
 enum Gender {
@@ -35,18 +36,26 @@ export const LoginForm: FC<Props> = (props: Props) => {
         formState: { errors },
     } = useForm<FormInput>();
 
-    const onSubmit: SubmitHandler<FormInput> = useCallback(async (params) => {
-        props.onSubmit(params);
-    }, []);
+    const debounceSubmit = useCallback(
+        _.debounce((params) => props.onSubmit(params), 500),
+        []
+    );
+
+    const onSubmit: SubmitHandler<FormInput> = useCallback(
+        async (params) => debounceSubmit(params),
+        []
+    );
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Composition gap={12}>
                 <StyledInput
+                    data-testid="username"
                     {...register('username', { required: true })}
                     placeholder="WINK 통합 아이디 입력"
                 />
                 {errors.username?.type === 'required' && '아이디는 필수입력 항목입니다.'}
                 <StyledInput
+                    data-testid="password"
                     {...register('password', { required: true })}
                     type="password"
                     placeholder="비밀번호"
@@ -59,8 +68,9 @@ export const LoginForm: FC<Props> = (props: Props) => {
             {/*    <option value="male">남자</option>*/}
             {/*    <option value="other">기타</option>*/}
             {/*</select>*/}
-            <button type="submit">확인</button>
-            <input type="submit" />
+            <button data-testid="submit" type="submit">
+                확인
+            </button>
         </form>
     );
 };

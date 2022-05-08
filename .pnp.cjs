@@ -169,7 +169,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-hook-form", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:7.30.0"],\
             ["react-icons", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:4.3.1"],\
             ["react-is", "npm:18.1.0"],\
-            ["react-query-devtools", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:2.6.3"],\
             ["regenerator-runtime", "npm:0.13.9"],\
             ["storybook-addon-designs", "npm:6.2.1"],\
             ["storybook-axios", "npm:1.0.1"],\
@@ -20226,15 +20225,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["match-sorter", [\
-        ["npm:4.2.1", {\
-          "packageLocation": "./.yarn/cache/match-sorter-npm-4.2.1-dd63b8f9e9-7f3cd8f84c.zip/node_modules/match-sorter/",\
-          "packageDependencies": [\
-            ["match-sorter", "npm:4.2.1"],\
-            ["@babel/runtime", "npm:7.17.9"],\
-            ["remove-accents", "npm:0.4.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:6.3.1", {\
           "packageLocation": "./.yarn/cache/match-sorter-npm-6.3.1-ff3565ebb9-a4b02b676a.zip/node_modules/match-sorter/",\
           "packageDependencies": [\
@@ -24962,33 +24952,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "react-dom",\
             "react-native",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["react-query-devtools", [\
-        ["npm:2.6.3", {\
-          "packageLocation": "./.yarn/cache/react-query-devtools-npm-2.6.3-d772adee0f-55cd257c32.zip/node_modules/react-query-devtools/",\
-          "packageDependencies": [\
-            ["react-query-devtools", "npm:2.6.3"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:2.6.3", {\
-          "packageLocation": "./.yarn/__virtual__/react-query-devtools-virtual-e0acfdee4b/0/cache/react-query-devtools-npm-2.6.3-d772adee0f-55cd257c32.zip/node_modules/react-query-devtools/",\
-          "packageDependencies": [\
-            ["react-query-devtools", "virtual:538c804d4db5cfb9e2708677f5f29afae13c92fbf3853684bf4d91765fdaa259367ac2f9dde629508df3dccb16b1eff0008e2c16e0202b655436a53ffbdfd545#npm:2.6.3"],\
-            ["@types/react", "npm:18.0.8"],\
-            ["@types/react-query", null],\
-            ["match-sorter", "npm:4.2.1"],\
-            ["react", "npm:18.1.0"],\
-            ["react-query", null]\
-          ],\
-          "packagePeers": [\
-            "@types/react-query",\
-            "@types/react",\
-            "react-query",\
             "react"\
           ],\
           "linkType": "HARD"\

@@ -70,7 +70,6 @@
     "playwright": "^1.21.1",
     "playwright-chromium": "^1.21.1",
     "react-is": "^18.1.0",
-    "react-query-devtools": "^2.6.3",
     "regenerator-runtime": "^0.13.9",
     "storybook-addon-designs": "^6.2.1",
     "storybook-axios": "^1.0.1"

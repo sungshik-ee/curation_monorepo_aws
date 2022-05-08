@@ -67,7 +67,7 @@ const Login: NextPage = () => {
                 queryClient.setQueryData(['profile', 'actor'], undefined);
             },
         });
-    }, [auth]);
+    }, [auth, loginMutation, queryClient]);
     return (
         <>
             <Head>

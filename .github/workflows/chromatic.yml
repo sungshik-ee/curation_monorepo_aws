@@ -31,7 +31,7 @@ jobs:
       - name: Install packages (zero-install)
         run: yarn install
       - name: build application
-        run: yarn build_storybook
+        run:  yarn workspace @DanbiEduCorp/ui run build_storybook
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Composition, Box } from 'atomic-layout';
-import { StyledButtonWrapper, StyledYgFont as StyledFont, StyledButton } from './styles/button';
-import { BooksLevelType, ButtonsProps as Props } from './types/button';
+import { Box, Composition } from 'atomic-layout';
+import { StyledButton, StyledButtonWrapper, StyledYgFont as StyledFont } from './styles/button';
+import { ButtonsProps as Props } from './types/button';
 
 export const Buttons: React.FC<Props> = (props: Props) => {
     const [selectedLevel, setSelectedLevel] = useState(props.selectedLevel);

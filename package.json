@@ -1,22 +1,37 @@
 {
   "name": "root",
   "private": true,
-  "devDependencies": {
-    "core-js": "^3.22.2",
-    "lerna": "^4.0.0"
-  },
   "workspaces": [
-    "packages/*"
+    "apps/*"
   ],
-  "scripts": {
-    "mobile_dev": "yarn workspace @DanbiEduCorp/mobile dev",
-    "mobile_build": "yarn workspace @DanbiEduCorp/mobile build",
-    "mobile_start": "yarn workspace @DanbiEduCorp/mobile start",
-    "mobile_lint": "yarn workspace @DanbiEduCorp/mobile lint",
-    "ui_test": "yarn workspace @DanbiEduCorp/ui test",
-    "ui_dev": "yarn workspace @DanbiEduCorp/ui storybook",
-    "ui_build": "yarn workspace @DanbiEduCorp/ui build-storybook",
-    "legacy_dev": "yarn workspace wink_books start"
+  "packageManager": "yarn@3.2.0",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/generator": "^7.17.10",
+    "@babel/template": "^7.16.7",
+    "@babel/types": "^7.17.10",
+    "@jest/types": "^27.5.1",
+    "@types/node": "^17.0.31",
+    "core-js": "^3.22.2",
+    "jest-environment-node": "^27.5.1",
+    "lerna": "^4.0.0",
+    "playwright-chromium": "^1.21.1",
+    "prettier": "^2.6.2",
+    "regenerator-runtime": "^0.13.9"
   },
-  "packageManager": "yarn@3.2.0"
+  "versionGroups": [
+    {
+      "dependencies": [
+        "react",
+        "react-dom"
+      ],
+      "devDependencies": [
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "packages": [
+        "**"
+      ]
+    }
+  ]
 }

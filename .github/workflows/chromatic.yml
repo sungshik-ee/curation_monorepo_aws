@@ -11,7 +11,7 @@ on:
       - 'develop'
       - 'master'
     paths:
-      - 'packages/ui/stories/**'
+      - 'apps/ui/stories/**'
 
 # List of jobs
 jobs:
@@ -20,11 +20,17 @@ jobs:
     # Operating System
     runs-on: ubuntu-latest
     env:
-      STORYBOOK_BUILD_DIR: ./packages/ui/storybook-static
+      STORYBOOK_BUILD_DIR: ./apps/ui/storybook-static
     # Job steps
     steps:
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
       - uses: actions/checkout@v1
-      - name: build application (zero-install)
+      - name: Install packages (zero-install)
+        run: yarn install
+      - name: build application
         run: yarn ui_build
       - uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action

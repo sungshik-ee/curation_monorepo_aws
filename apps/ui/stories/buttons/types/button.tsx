@@ -2,7 +2,7 @@ export type ActiveType = 'RED' | 'BLUE';
 export type BooksLevelType = 'RA' | 'RB' | 'RT' | 'ALL';
 
 export interface ButtonProps {
-    label: string;
+    label?: string;
     active?: boolean;
     activeType?: ActiveType;
     onClick: (active: boolean) => void;

@@ -1,5 +1,5 @@
-import styled, { css, createGlobalStyle } from 'styled-components';
-import { ButtonProps as Props, ActiveType } from '../types/button';
+import styled, { createGlobalStyle, css } from 'styled-components';
+import { ButtonProps as Props } from '../types/button';
 
 export const StyledYgFont = createGlobalStyle`
     @font-face {

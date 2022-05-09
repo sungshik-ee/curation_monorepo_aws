@@ -23,8 +23,9 @@ export const Buttons: React.FC<Props> = (props: Props) => {
                                 activeType={button.activeType}
                                 active={button.key === selectedLevel}
                                 onClick={(event) => handleClick(button.key)}
-                                label={button.label}
-                            />
+                            >
+                                {button.label}
+                            </StyledButton>
                         ))}
                     </Box>
                 </StyledButtonWrapper>

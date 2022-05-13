@@ -28,14 +28,14 @@ const StyledPx = styled(BaseStyled)`
     width: 320px;
     height: 320px;
     background: #1abc9c;
-    padding: 32px;
+    padding: 80px;
 `;
 
 const StyledRem = styled(BaseStyled)`
     width: 20rem;
     height: 20rem;
     background: #4aa3df;
-    padding: 2rem;
+    padding: 5rem;
     color: white;
 `;
 
@@ -43,7 +43,7 @@ const StyledEm = styled(BaseStyled)`
     width: 20em;
     height: 20em;
     background: #34495e;
-    padding: 2em;
+    padding: 5em;
     color: white;
 `;
 
@@ -60,21 +60,21 @@ export const RemSample: FC<Props> = (props: Props) => {
                             <StyledPx fontSize={props.fontSize}>
                                 <div>'px'을 사용하는 영역</div>
                                 <div>320px * 320px</div>
-                                <div>padding: 32px</div>
+                                <div>padding: 80px</div>
                             </StyledPx>
                         </Px>
                         <Rem>
                             <StyledRem fontSize={props.fontSize}>
                                 <div>'rem'을 사용하는 영역</div>
                                 <div>20rem * 20rem</div>
-                                <div>padding: 20rem</div>
+                                <div>padding: 5rem</div>
                             </StyledRem>
                         </Rem>
                         <Em>
                             <StyledEm fontSize={props.fontSize}>
                                 <div>'em'을 사용하는 영역</div>
                                 <div>20em * 20em</div>
-                                <div>padding: 20em</div>
+                                <div>padding: 5em</div>
                             </StyledEm>
                         </Em>
                     </>

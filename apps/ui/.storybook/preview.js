@@ -25,5 +25,5 @@ export const parameters = {
         },
     },
     viewport: { viewports: INITIAL_VIEWPORTS },
-    layout: 'centered',
+    // layout: 'centered',
 };

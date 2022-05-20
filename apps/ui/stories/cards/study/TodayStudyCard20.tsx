@@ -1,104 +1,45 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-
-const StyledContainer = styled.div`
-    position: relative;
-`;
+import {
+    StyledContainer,
+    StyledBackgroundImage,
+    StyledImage,
+    StyledSvg1,
+    StyledSvg2,
+    StyledSvg3,
+    StyledSvg4,
+    StyledSvg5,
+    StyledSvg6,
+    StyledSvg7,
+    StyledSvg8,
+} from './styles/todayStudy';
 const StyledRect1 = styled.rect`
     fill: rgba(190, 104, 72, 1);
-`;
-
-const StyledSvg1 = styled.svg`
-    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
-    position: absolute;
-    overflow: visible;
-    width: 140px;
-    height: 168px;
-    left: 2px;
-    top: 0px;
 `;
 
 const StyledRect2 = styled.rect`
     opacity: 0.102;
     fill: rgba(0, 0, 0, 1);
 `;
-const StyledSvg2 = styled.svg`
-    position: absolute;
-    overflow: visible;
-    width: 25px;
-    height: 150px;
-    left: 96px;
-    top: 0px;
-`;
 const StyledRect3 = styled.rect`
     fill: rgba(255, 255, 255, 1);
-`;
-const StyledSvg3 = styled.svg`
-    position: absolute;
-    overflow: visible;
-    width: 25px;
-    height: 150px;
-    left: 95px;
-    top: 0px;
 `;
 const StyledRect4 = styled.rect`
     opacity: 0.102;
     fill: rgba(0, 0, 0, 1);
 `;
-const StyledSvg4 = styled.svg`
-    position: absolute;
-    overflow: visible;
-    width: 25px;
-    height: 150px;
-    left: 93px;
-    top: 0px;
-`;
 const StyledRect5 = styled.rect`
     fill: rgba(255, 255, 255, 1);
-`;
-const StyledSvg5 = styled.svg`
-    position: absolute;
-    overflow: visible;
-    width: 25px;
-    height: 150px;
-    left: 92px;
-    top: 0px;
 `;
 const StyledRect6 = styled.rect`
     opacity: 0.149;
     fill: rgba(0, 0, 0, 1);
 `;
-const StyledSvg6 = styled.svg`
-    position: absolute;
-    overflow: visible;
-    width: 25px;
-    height: 150px;
-    left: 90px;
-    top: 0px;
-`;
 const StyledPath7 = styled.path`
     fill: rgba(242, 127, 91, 1);
 `;
-const StyledSvg7 = styled.svg`
-    overflow: visible;
-    position: absolute;
-    width: 114px;
-    height: 150px;
-    left: 0px;
-    top: 0px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-`;
 const StyledPath8 = styled.path`
     fill: rgba(255, 255, 255, 1);
-`;
-const StyledSvg8 = styled.svg`
-    overflow: visible;
-    position: absolute;
-    width: 89.678px;
-    height: 73.897px;
-    left: 15.822px;
-    top: 15.603px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
 `;
 const StyledTitleContainer = styled.div`
     position: absolute;
@@ -138,23 +79,6 @@ const StyledTitleBottom = styled.div`
     font-size: 17px;
     color: rgba(51, 51, 51, 1);
 `;
-const StyledBackgroundImage = styled.img`
-    position: absolute;
-    width: 114px;
-    height: 150px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-`;
-const StyledImage = styled.img`
-    position: absolute;
-    width: 114px;
-    height: 150px;
-    left: 0px;
-    top: 0px;
-    overflow: visible;
-`;
-
 type Props = {
     onClick: (params: any) => void;
 };

@@ -10,25 +10,52 @@ import {
     StyledSvg4,
     StyledSvg5,
     StyledSvg6,
-    StyledSvg7,
     StyledSvg8,
     StyledRect2, StyledRect3, StyledRect4, StyledRect5, StyledRect6, StyledPath8,
-    StyledTitleContainer,
-    StyledTitleTop,
-    StyledTitleBottom
 } from './styles/todayStudy';
 const StyledRect1 = styled.rect`
-    fill: rgba(118,195,192,1);
+    fill: rgba(106,144,195,1);
 `;
-const StyledPath7 = styled.path`
-    fill: rgba(122,224,220,1);
+const StyledSvg7 = styled.svg`
+    position: absolute;
+    overflow: visible;
+    width: 114px;
+    height: 150px;
+    left: 1px;
+    top: 0px;
+`
+const StyledRect7 = styled.rect`
+    fill: rgba(113,156,214,1);
+`
+const StyledTitleContainer = styled.div`
+    position: absolute;
+    width: 58px;
+    height: 42px;
+    left: 35px;
+    top: 32.253px;
+    overflow: visible;
 `;
-
+const StyledTitle = styled.div`
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 59px;
+    white-space: nowrap;
+    line-height: 22px;
+    margin-top: -2.5px;
+    text-align: center;
+    font-family: Sandoll GothicNeoRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(51, 51, 51, 1);
+`
 type Props = {
     onClick: (params: any) => void;
 };
 
-export const TodayStudyCard30: (props: Props) => JSX.Element = (props: Props) => {
+export const TodayStudyCard50: (props: Props) => JSX.Element = (props: Props) => {
     const handleClick = () => {
         props.onClick({});
     };
@@ -42,26 +69,25 @@ export const TodayStudyCard30: (props: Props) => JSX.Element = (props: Props) =>
                 <StyledRect2 rx="10" ry="10" x="0" y="0" width="25" height="150">
                 </StyledRect2>
             </StyledSvg2>
-            <StyledSvg3 >
+            <StyledSvg3>
                 <StyledRect3 rx="10" ry="10" x="0" y="0" width="25" height="150">
                 </StyledRect3>
             </StyledSvg3>
-            <StyledSvg4 >
+            <StyledSvg4>
                 <StyledRect4 rx="10" ry="10" x="0" y="0" width="25" height="150">
                 </StyledRect4>
             </StyledSvg4>
-            <StyledSvg5 >
+            <StyledSvg5>
                 <StyledRect5 rx="10" ry="10" x="0" y="0" width="25" height="150">
                 </StyledRect5>
             </StyledSvg5>
-            <StyledSvg6 >
+            <StyledSvg6>
                 <StyledRect6 rx="10" ry="10" x="0" y="0" width="25" height="150">
                 </StyledRect6>
             </StyledSvg6>
-            <StyledSvg7 viewBox="0 0 114 150">
-                <StyledPath7
-                      d="M 8 0 L 106 0 C 110.4182815551758 0 114 3.581721782684326 114 8 L 114 142 C 114 146.4182739257812 110.4182815551758 150 106 150 L 8 150 C 3.581721782684326 150 0 146.4182739257812 0 142 L 0 8 C 0 3.581721782684326 3.581721782684326 0 8 0 Z">
-                </StyledPath7>
+            <StyledSvg7>
+                <StyledRect7 rx="8" ry="8" x="0" y="0" width="114" height="150">
+                </StyledRect7>
             </StyledSvg7>
             <StyledSvg8 viewBox="231.007 188.989 89.678 73.897">
                 <StyledPath8
@@ -72,14 +98,12 @@ export const TodayStudyCard30: (props: Props) => JSX.Element = (props: Props) =>
                 src="/cards/todayStudy/background.png"
                 srcSet="/cards/todayStudy/background.png 1x, /cards/todayStudy/background@2x.png 2x"
             />
-            <StyledImage src="/cards/todayStudy/30.png" srcSet="/cards/todayStudy/30.png 1x, /cards/todayStudy/30@2x.png 2x"/>
+            <StyledImage src="/cards/todayStudy/50.png" srcSet="/cards/todayStudy/50.png 1x, /cards/todayStudy/50@2x.png 2x"/>
+
             <StyledTitleContainer>
-                <StyledTitleTop>
-                    <span>영어</span>
-                </StyledTitleTop>
-                <StyledTitleBottom>
-                    <span>스토리</span>
-                </StyledTitleBottom>
+                <StyledTitle>
+                    <span>학교공부<br/>따라잡기</span>
+                </StyledTitle>
             </StyledTitleContainer>
         </StyledContainer>
     );

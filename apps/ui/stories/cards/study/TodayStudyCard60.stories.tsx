@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodayStudyCard10 } from './TodayStudyCard10';
+import { TodayStudyCard60 } from './TodayStudyCard60';
 
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { within, userEvent, waitFor } from '@storybook/testing-library';
@@ -7,7 +7,7 @@ import { expect } from '@storybook/jest';
 
 export default {
     title: '학생앱/전체메뉴/오늘의공부/최상위카드',
-    component: TodayStudyCard10,
+    component: TodayStudyCard60,
     argTypes: {
         onClick: { action: '카드 선택됨' },
     },
@@ -16,7 +16,7 @@ export default {
     },
 };
 
-const Template: ComponentStory<typeof TodayStudyCard10> = (args) => <TodayStudyCard10 {...args} />;
+const Template: ComponentStory<typeof TodayStudyCard60> = (args) => <TodayStudyCard60 {...args} />;
 
-export const 한글국어 = Template.bind({});
-한글국어.args = {};
+export const 초등국어교과서읽기 = Template.bind({});
+초등국어교과서읽기.args = {};

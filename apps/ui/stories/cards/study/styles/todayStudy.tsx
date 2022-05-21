@@ -124,3 +124,25 @@ export const StyledTitleBottom = styled.div`
     font-size: 17px;
     color: rgba(51, 51, 51, 1);
 `;
+
+export const StyledRect2 = styled.rect`
+    opacity: 0.102;
+    fill: rgba(0, 0, 0, 1);
+`;
+export const StyledRect3 = styled.rect`
+    fill: rgba(255,255,255,1);
+`;
+export const StyledRect4 = styled.rect`
+    opacity: 0.102;
+    fill: rgba(0, 0, 0, 1);
+`;
+export const StyledRect5 = styled.rect`
+    fill: rgba(255,255,255,1);
+`;
+export const StyledRect6 = styled.rect`
+    opacity: 0.149;
+    fill: rgba(0, 0, 0, 1);
+`;
+export const StyledPath8 = styled.path`
+    fill: rgba(255,255,255,1);
+`;

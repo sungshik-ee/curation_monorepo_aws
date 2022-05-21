@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:e2e" : "playwright test"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@DanbiEduCorp/core": "workspaces:*",

@@ -7,11 +7,9 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(j|t)sx?$/,
       use: defaultLoaders.babel,
-
       include: [
         path.join(__dirname, '../ui'),
       ]
-
     });
     return config
   },

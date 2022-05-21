@@ -86,3 +86,41 @@ export const StyledImage = styled.img`
     top: 0px;
     overflow: visible;
 `;
+export const StyledTitleContainer = styled.div`
+    position: absolute;
+    width: 44px;
+    height: 46.448px;
+    left: 41.662px;
+    top: 28.328px;
+    overflow: visible;
+`;
+export const StyledTitleTop = styled.div`
+    left: 2px;
+    top: 19.448px;
+    position: absolute;
+    overflow: visible;
+    width: 39px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Sandoll GothicNeoRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: rgba(51, 51, 51, 1);
+`;
+export const StyledTitleBottom = styled.div`
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 45px;
+    white-space: nowrap;
+    line-height: 22px;
+    margin-top: -2.5px;
+    text-align: center;
+    font-family: Sandoll GothicNeoRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(51, 51, 51, 1);
+`;

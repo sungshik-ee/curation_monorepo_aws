@@ -63,7 +63,7 @@ type Props = {
     onClick: (params: any) => void;
 };
 
-export const TodayStudyCard10: FC<Props> = (props: Props) => {
+export const TodayStudyCard10: (props: Props) => JSX.Element = (props: Props) => {
     const handleClick = () => {
         props.onClick({});
     };
@@ -91,8 +91,8 @@ export const TodayStudyCard10: FC<Props> = (props: Props) => {
                 <StyledPath7 d="M 8 0 L 106 0 C 110.4182815551758 0 114 3.581721782684326 114 8 L 114 142 C 114 146.4182739257812 110.4182815551758 150 106 150 L 8 150 C 3.581721782684326 150 0 146.4182739257812 0 142 L 0 8 C 0 3.581721782684326 3.581721782684326 0 8 0 Z"></StyledPath7>
             </StyledSvg7>
             <StyledBackgroundImage
-                src="/cards/todayStudyBackground01.png"
-                srcSet="cards/todayStudyBackground01.png 1x, cards/todayStudyBackground01@2x.png 2x"
+                src="/cards/todayStudyBackground.png"
+                srcSet="cards/todayStudyBackground.png 1x, cards/todayStudyBackground@2x.png 2x"
             />
             <StyledSvg8 viewBox="231.007 188.989 89.678 73.897">
                 <StyledPath8 d="M 276.9049377441406 188.9961853027344 C 276.9049377441406 188.9961853027344 259.0520935058594 188.4453125 245.8781585693359 196.8582763671875 C 232.7040100097656 205.2710876464844 230.91064453125 224.592041015625 231.0110778808594 226.3407440185547 C 231.111328125 228.0892639160156 231.5381317138672 256.7638549804688 262.037841796875 261.7198181152344 C 292.5377197265625 266.6757507324219 314.4412841796875 255.0574645996094 318.2742614746094 241.4095611572266 C 322.1071472167969 227.7617492675781 321.7560729980469 212.9118194580078 314.3957824707031 204.7201995849609 C 307.0356140136719 196.5286560058594 298.7050476074219 188.7958526611328 276.9049377441406 188.9961853027344 Z"></StyledPath8>
@@ -105,8 +105,8 @@ export const TodayStudyCard10: FC<Props> = (props: Props) => {
                 </span>
             </StyledTitle>
             <StyledImage
-                src="/cards/todayStudyBody01.png"
-                srcSet="cards/todayStudyBody01.png 1x, cards/todayStudyBody01@2x.png 2x"
+                src="/cards/todayStudyBody10.png"
+                srcSet="cards/todayStudyBody10.png 1x, cards/todayStudyBody10@2x.png 2x"
             />
         </StyledContainer>
     );

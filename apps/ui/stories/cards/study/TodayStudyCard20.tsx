@@ -12,6 +12,9 @@ import {
     StyledSvg6,
     StyledSvg7,
     StyledSvg8,
+    StyledTitleContainer,
+    StyledTitleTop,
+    StyledTitleBottom
 } from './styles/todayStudy';
 const StyledRect1 = styled.rect`
     fill: rgba(190, 104, 72, 1);
@@ -41,49 +44,12 @@ const StyledPath7 = styled.path`
 const StyledPath8 = styled.path`
     fill: rgba(255, 255, 255, 1);
 `;
-const StyledTitleContainer = styled.div`
-    position: absolute;
-    width: 44px;
-    height: 46.448px;
-    left: 38.662px;
-    top: 29.552px;
-    overflow: visible;
-`;
-const StyledTitleTop = styled.div`
-    left: 2px;
-    top: 19.448px;
-    position: absolute;
-    overflow: visible;
-    width: 39px;
-    white-space: nowrap;
-    text-align: center;
-    font-family: Sandoll GothicNeoRound;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    color: rgba(51, 51, 51, 1);
-`;
-const StyledTitleBottom = styled.div`
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    overflow: visible;
-    width: 45px;
-    white-space: nowrap;
-    line-height: 22px;
-    margin-top: -2.5px;
-    text-align: center;
-    font-family: Sandoll GothicNeoRound;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    color: rgba(51, 51, 51, 1);
-`;
+
 type Props = {
     onClick: (params: any) => void;
 };
 
-export const TodayStudyCard20: FC<Props> = (props: Props) => {
+export const TodayStudyCard20: (props: Props) => JSX.Element = (props: Props) => {
     const handleClick = () => {
         props.onClick({});
     };
@@ -111,8 +77,8 @@ export const TodayStudyCard20: FC<Props> = (props: Props) => {
                 <StyledPath7 d="M 8 0 L 106 0 C 110.4182815551758 0 114 3.581721782684326 114 8 L 114 142 C 114 146.4182739257812 110.4182815551758 150 106 150 L 8 150 C 3.581721782684326 150 0 146.4182739257812 0 142 L 0 8 C 0 3.581721782684326 3.581721782684326 0 8 0 Z"></StyledPath7>
             </StyledSvg7>
             <StyledBackgroundImage
-                src="/cards/todayStudyBackground02.png"
-                srcSet="/cards/todayStudyBackground02.png 1x, /cards/todayStudyBackground02@2x.png 2x"
+                src="/cards/todayStudyBackground.png"
+                srcSet="/cards/todayStudyBackground.png 1x, /cards/todayStudyBackground@2x.png 2x"
             />
 
             <StyledSvg8 viewBox="231.007 188.989 89.678 73.897">
@@ -127,8 +93,8 @@ export const TodayStudyCard20: FC<Props> = (props: Props) => {
                 </StyledTitleBottom>
             </StyledTitleContainer>
             <StyledImage
-                src="/cards/todayStudyBody02.png"
-                srcSet="/cards/todayStudyBody02.png 1x, /cards/todayStudyBody02@2x.png 2x"
+                src="/cards/todayStudyBody20.png"
+                srcSet="/cards/todayStudyBody20.png 1x, /cards/todayStudyBody20@2x.png 2x"
             />
         </StyledContainer>
     );

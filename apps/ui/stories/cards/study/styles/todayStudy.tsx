@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
     position: relative;
+    width: 122px;
+    height: 150px;
 `;
 export const StyledSvg1 = styled.svg`
     filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2));
     position: absolute;
     overflow: visible;
-    width: 140px;
-    height: 168px;
+    width: 122px;
+    height: 150px;
     left: 2px;
     top: 0px;
 `;

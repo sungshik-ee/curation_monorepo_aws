@@ -12,6 +12,7 @@ import {TodayStudyCard70} from './TodayStudyCard70'
 import {TodayStudyDrawStand} from './TodayStudyDrawStand';
 import {TodayStudyTitle} from './TodayStudyTitle'
 import {TodayStudyArrow} from './TodayStudyArrow'
+import {TodayStudyBackground} from './TodayStudyBackground'
 
 const StyledContainer = styled.div`
     background-color: rgba(242,234,205,1);
@@ -95,6 +96,7 @@ export const TodayStudy: (props: Props) => JSX.Element = (props: Props) => {
                                 <TodayStudyArrow/>
                             </Box>
                         </Arrow>
+                        <TodayStudyBackground/>
                     </>
                 )}
 

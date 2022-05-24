@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@DanbiEduCorp/core@workspace:apps/core, @DanbiEduCorp/core@workspaces:*":
+"@DanbiEduCorp/core@workspace:packages/core, @DanbiEduCorp/core@workspaces:*":
   version: 0.0.0-use.local
-  resolution: "@DanbiEduCorp/core@workspace:apps/core"
+  resolution: "@DanbiEduCorp/core@workspace:packages/core"
   dependencies:
     "@types/react": ^18.0.8
     axios: ^0.27.2
@@ -37,9 +37,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@DanbiEduCorp/ui@workspace:apps/ui, @DanbiEduCorp/ui@workspaces:*":
+"@DanbiEduCorp/ui@workspace:packages/ui, @DanbiEduCorp/ui@workspaces:*":
   version: 0.0.0-use.local
-  resolution: "@DanbiEduCorp/ui@workspace:apps/ui"
+  resolution: "@DanbiEduCorp/ui@workspace:packages/ui"
   dependencies:
     "@babel/core": ^7.17.9
     "@babel/plugin-proposal-class-properties": ^7.16.7

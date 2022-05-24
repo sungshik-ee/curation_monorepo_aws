@@ -12,7 +12,12 @@ import {
     StyledSvg6,
     StyledSvg7,
     StyledSvg8,
-    StyledRect2, StyledRect3, StyledRect4, StyledRect5, StyledRect6, StyledPath8,
+    StyledRect2,
+    StyledRect3,
+    StyledRect4,
+    StyledRect5,
+    StyledRect6,
+    StyledPath8,
 } from './styles/todayStudy';
 
 const StyledRect1 = styled.rect`

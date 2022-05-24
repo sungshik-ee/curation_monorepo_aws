@@ -8,14 +8,16 @@ import { useAxios } from '@DanbiEduCorp/core/src/axios';
 import { TodayStudy } from '@DanbiEduCorp/ui/stories/cards/study/TodayStudy';
 
 const Student: NextPage = () => {
+    const handleClick = () => {
+        console.log('clicked!!');
+    };
     return (
         <div>
             <div>
-                <TodayStudy />
+                <TodayStudy onClick={handleClick} />
             </div>
-
         </div>
-    )
-}
+    );
+};
 
 export default Student;

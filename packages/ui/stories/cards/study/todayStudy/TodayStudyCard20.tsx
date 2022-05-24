@@ -22,20 +22,17 @@ import {
     StyledTitleTop,
     StyledTitleBottom,
 } from './styles/todayStudy';
+import { Props } from './types/todayStudyCard';
 const StyledRect1 = styled.rect`
-    fill: rgba(118, 195, 192, 1);
+    fill: rgba(190, 104, 72, 1);
 `;
 const StyledPath7 = styled.path`
-    fill: rgba(122, 224, 220, 1);
+    fill: rgba(242, 127, 91, 1);
 `;
 
-type Props = {
-    onClick: (params: any) => void;
-};
-
-export const TodayStudyCard30: (props: Props) => JSX.Element = (props: Props) => {
+export const TodayStudyCard20: FC<Props> = (props: Props) => {
     const handleClick = () => {
-        props.onClick({});
+        props.onClick(props.key);
     };
     return (
         <StyledContainer onClick={handleClick}>
@@ -63,22 +60,27 @@ export const TodayStudyCard30: (props: Props) => JSX.Element = (props: Props) =>
             <StyledSvg8 viewBox="231.007 188.989 89.678 73.897">
                 <StyledPath8 d="M 276.9049377441406 188.9961853027344 C 276.9049377441406 188.9961853027344 259.0520935058594 188.4453125 245.8781585693359 196.8582763671875 C 232.7040100097656 205.2710876464844 230.91064453125 224.592041015625 231.0110778808594 226.3407440185547 C 231.111328125 228.0892639160156 231.5381317138672 256.7638549804688 262.037841796875 261.7198181152344 C 292.5377197265625 266.6757507324219 314.4412841796875 255.0574645996094 318.2742614746094 241.4095611572266 C 322.1071472167969 227.7617492675781 321.7560729980469 212.9118194580078 314.3957824707031 204.7201995849609 C 307.0356140136719 196.5286560058594 298.7050476074219 188.7958526611328 276.9049377441406 188.9961853027344 Z"></StyledPath8>
             </StyledSvg8>
+
             <StyledBackgroundImage
                 src="/cards/todayStudy/background.png"
                 srcSet="/cards/todayStudy/background.png 1x, /cards/todayStudy/background@2x.png 2x"
             />
             <StyledImage
-                src="/cards/todayStudy/30.png"
-                srcSet="/cards/todayStudy/30.png 1x, /cards/todayStudy/30@2x.png 2x"
+                src="/cards/todayStudy/20.png"
+                srcSet="/cards/todayStudy/20.png 1x, /cards/todayStudy/20@2x.png 2x"
             />
             <StyledTitleContainer>
                 <StyledTitleTop>
-                    <span>영어</span>
+                    <span>수학</span>
                 </StyledTitleTop>
                 <StyledTitleBottom>
-                    <span>스토리</span>
+                    <span>영역별</span>
                 </StyledTitleBottom>
             </StyledTitleContainer>
         </StyledContainer>
     );
+};
+
+TodayStudyCard20.defaultProps = {
+    key: 'TODAY_STUDY_M',
 };

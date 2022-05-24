@@ -12,25 +12,41 @@ import {
     StyledSvg6,
     StyledSvg7,
     StyledSvg8,
-    StyledRect2, StyledRect3, StyledRect4, StyledRect5, StyledRect6, StyledPath8,
-    StyledTitleContainer,
-    StyledTitleTop,
-    StyledTitleBottom
+    StyledRect2,
+    StyledRect3,
+    StyledRect4,
+    StyledRect5,
+    StyledRect6,
+    StyledPath8,
 } from './styles/todayStudy';
+import { Props } from './types/todayStudyCard';
 const StyledRect1 = styled.rect`
-    fill: rgba(190, 104, 72, 1);
+    fill: rgba(249, 155, 55, 1);
 `;
 const StyledPath7 = styled.path`
-    fill: rgba(242, 127, 91, 1);
+    fill: rgba(249, 155, 55, 1);
+`;
+const StyledTitle = styled.div`
+    left: 32px;
+    top: 32px;
+    position: absolute;
+    overflow: visible;
+    width: 61px;
+    white-space: nowrap;
+    line-height: 22px;
+    margin-top: -2.5px;
+    text-align: center;
+    font-family: Sandoll GothicNeoRound;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: rgba(51, 51, 51, 1);
+    letter-spacing: -0.5px;
 `;
 
-type Props = {
-    onClick: (params: any) => void;
-};
-
-export const TodayStudyCard20: (props: Props) => JSX.Element = (props: Props) => {
+export const TodayStudyCard70: FC<Props> = (props: Props) => {
     const handleClick = () => {
-        props.onClick({});
+        props.onClick(props.key);
     };
     return (
         <StyledContainer onClick={handleClick}>
@@ -55,26 +71,27 @@ export const TodayStudyCard20: (props: Props) => JSX.Element = (props: Props) =>
             <StyledSvg7 viewBox="0 0 114 150">
                 <StyledPath7 d="M 8 0 L 106 0 C 110.4182815551758 0 114 3.581721782684326 114 8 L 114 142 C 114 146.4182739257812 110.4182815551758 150 106 150 L 8 150 C 3.581721782684326 150 0 146.4182739257812 0 142 L 0 8 C 0 3.581721782684326 3.581721782684326 0 8 0 Z"></StyledPath7>
             </StyledSvg7>
-            <StyledSvg8 viewBox="231.007 188.989 89.678 73.897">
-                <StyledPath8 d="M 276.9049377441406 188.9961853027344 C 276.9049377441406 188.9961853027344 259.0520935058594 188.4453125 245.8781585693359 196.8582763671875 C 232.7040100097656 205.2710876464844 230.91064453125 224.592041015625 231.0110778808594 226.3407440185547 C 231.111328125 228.0892639160156 231.5381317138672 256.7638549804688 262.037841796875 261.7198181152344 C 292.5377197265625 266.6757507324219 314.4412841796875 255.0574645996094 318.2742614746094 241.4095611572266 C 322.1071472167969 227.7617492675781 321.7560729980469 212.9118194580078 314.3957824707031 204.7201995849609 C 307.0356140136719 196.5286560058594 298.7050476074219 188.7958526611328 276.9049377441406 188.9961853027344 Z"></StyledPath8>
+            <StyledSvg8 viewBox="231.007 188.989 100.205 75.242">
+                <StyledPath8 d="M 282.2928161621094 188.9963226318359 C 282.2928161621094 188.9963226318359 262.34423828125 188.4354095458984 247.6238708496094 197.0015716552734 C 232.9031982421875 205.5675811767578 230.8993072509766 225.2403717041016 231.0115356445312 227.0209197998047 C 231.12353515625 228.80126953125 231.6004638671875 257.998046875 265.6804809570312 263.0442504882812 C 299.7607421875 268.0904235839844 324.2355651855469 256.2605895996094 328.5184936523438 242.3641357421875 C 332.8013000488281 228.4678039550781 332.4089965820312 213.3474578857422 324.1846923828125 205.0066680908203 C 315.9605102539062 196.6659545898438 306.6520385742188 188.7923431396484 282.2928161621094 188.9963226318359 Z"></StyledPath8>
             </StyledSvg8>
-
             <StyledBackgroundImage
                 src="/cards/todayStudy/background.png"
                 srcSet="/cards/todayStudy/background.png 1x, /cards/todayStudy/background@2x.png 2x"
             />
             <StyledImage
-                src="/cards/todayStudy/20.png"
-                srcSet="/cards/todayStudy/20.png 1x, /cards/todayStudy/20@2x.png 2x"
+                src="/cards/todayStudy/70.png"
+                srcSet="/cards/todayStudy/70.png 1x, /cards/todayStudy/70@2x.png 2x"
             />
-            <StyledTitleContainer>
-                <StyledTitleTop>
-                    <span>수학</span>
-                </StyledTitleTop>
-                <StyledTitleBottom>
-                    <span>영역별</span>
-                </StyledTitleBottom>
-            </StyledTitleContainer>
+            <StyledTitle>
+                <span>
+                    초등 수학
+                    <br />
+                    개념사전
+                </span>
+            </StyledTitle>
         </StyledContainer>
     );
+};
+TodayStudyCard70.defaultProps = {
+    key: 'TODAY_STUDY_SCHOOL_M',
 };

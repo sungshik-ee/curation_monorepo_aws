@@ -22,19 +22,17 @@ import {
     StyledTitleTop,
     StyledTitleBottom,
 } from './styles/todayStudy';
+import { Props } from './types/todayStudyCard';
 const StyledRect1 = styled.rect`
     fill: rgba(110, 185, 104, 1);
 `;
 const StyledPath7 = styled.path`
     fill: rgba(131, 219, 124, 1);
 `;
-type Props = {
-    onClick: (params: any) => void;
-};
 
-export const TodayStudyCard40: (props: Props) => JSX.Element = (props: Props) => {
+export const TodayStudyCard40: FC<Props> = (props: Props) => {
     const handleClick = () => {
-        props.onClick({});
+        props.onClick(props.key);
     };
     return (
         <StyledContainer onClick={handleClick}>
@@ -80,4 +78,8 @@ export const TodayStudyCard40: (props: Props) => JSX.Element = (props: Props) =>
             </StyledTitleContainer>
         </StyledContainer>
     );
+};
+
+TodayStudyCard40.defaultProps = {
+    key: 'TODAY_STUDY_EP',
 };

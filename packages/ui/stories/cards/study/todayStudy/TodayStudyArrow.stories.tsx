@@ -6,10 +6,9 @@ import { expect } from '@storybook/jest';
 import { TodayStudyArrow } from './TodayStudyArrow';
 
 export default {
-    title: '학생앱/전체메뉴/오늘의공부/배경',
+    title: '학생앱/전체보기/오늘의공부/배경',
     component: TodayStudyArrow,
-    argTypes: {
-    },
+    argTypes: {},
     parameters: {
         // layout: 'centered',
     },

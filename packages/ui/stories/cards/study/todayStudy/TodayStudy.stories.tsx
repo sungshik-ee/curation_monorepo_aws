@@ -6,7 +6,7 @@ import { within, userEvent, waitFor } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 export default {
-    title: '학생앱/전체메뉴/오늘의공부',
+    title: '학생앱/전체보기/오늘의공부',
     component: TodayStudy,
     argTypes: {
         onClick: { action: '카드 선택됨' },

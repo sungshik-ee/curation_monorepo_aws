@@ -6,10 +6,9 @@ import { expect } from '@storybook/jest';
 import { TodayStudyTitle } from './TodayStudyTitle';
 
 export default {
-    title: '학생앱/전체메뉴/오늘의공부/배경',
+    title: '학생앱/전체보기/오늘의공부/배경',
     component: TodayStudyTitle,
-    argTypes: {
-    },
+    argTypes: {},
     parameters: {
         // layout: 'centered',
     },

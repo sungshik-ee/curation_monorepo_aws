@@ -6,16 +6,17 @@ import { expect } from '@storybook/jest';
 import { TodayStudyBackground } from './TodayStudyBackground';
 
 export default {
-    title: '학생앱/전체메뉴/오늘의공부/배경',
+    title: '학생앱/전체보기/오늘의공부/배경',
     component: TodayStudyBackground,
-    argTypes: {
-    },
+    argTypes: {},
     parameters: {
         // layout: 'centered',
     },
 };
 
-const Template: ComponentStory<typeof TodayStudyBackground> = (args) => <TodayStudyBackground {...args} />;
+const Template: ComponentStory<typeof TodayStudyBackground> = (args) => (
+    <TodayStudyBackground {...args} />
+);
 
 export const 배경 = Template.bind({});
 배경.args = {};

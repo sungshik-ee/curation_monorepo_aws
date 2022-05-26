@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
+import _ from 'lodash';
 
 import { TodayStudyCard10 } from './TodayStudyCard10';
 import { TodayStudyCard20 } from './TodayStudyCard20';
@@ -15,6 +16,7 @@ import { TodayStudyArrow } from './TodayStudyArrow';
 import { TodayStudyBackground } from './TodayStudyBackground';
 
 const StyledContainer = styled.div`
+    position: relative;
     background-color: rgba(242, 234, 205, 1);
     width: 1070px;
 `;
@@ -51,10 +53,12 @@ const areas = `
     arrow
 `;
 
-export const TodayStudy: (props: Props) => JSX.Element = (props: Props) => {
-    const handleClick = (key: string) => {
-        console.log('click');
+export const TodayStudy: FC<Props> = (props: Props) => {
+    const throttledHandleClick = _.throttle((key: string) => {
         props.onClick(key);
+    }, 3000);
+    const handleClick = (key: string) => {
+        throttledHandleClick(key);
     };
     return (
         <StyledContainer>

@@ -3,10 +3,6 @@ import _ from 'lodash';
 import styled from 'styled-components';
 import { TodayStudy } from './study/todayStudy/TodayStudy';
 
-const StyledContainer = styled.div`
-    //margin-left: 13.125rem;
-`;
-
 type Props = {
     onClick: (params: any) => void;
     key?: string;
@@ -19,9 +15,9 @@ export const ContentLayout: FC<Props> = (props: Props) => {
         throttledHandleClick(props.key);
     };
     return (
-        <StyledContainer>
+        <>
             <TodayStudy onClick={handleClick} />
-        </StyledContainer>
+        </>
     );
 };
 ContentLayout.defaultProps = {

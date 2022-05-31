@@ -1,0 +1,34 @@
+import React, { FC } from 'react';
+import _ from 'lodash';
+import styled from 'styled-components';
+import { Box, Composition } from 'atomic-layout';
+const StyledContainer = styled.div`
+    width: 37px;
+    height: 37px;
+`;
+const StyledIconContainer = styled.div`
+    position: relative;
+    width: 33.339px;
+    height: 33.339px;
+`;
+const StyledImage = styled.img`
+    position: absolute;
+    width: 33.339px;
+    height: 33.339px;
+    left: 0px;
+    top: 0px;
+`;
+
+type Props = {};
+export const Icon60: FC<Props> = (props: Props) => {
+    return (
+        <Box as={StyledContainer} flex justifyContent="center" alignItems="center">
+            <StyledIconContainer>
+                <StyledImage
+                    src="/cards/aside/60.png"
+                    srcSet="/cards/aside/60.png 1x, /cards/aside/60@2x.png 2x"
+                />
+            </StyledIconContainer>
+        </Box>
+    );
+};

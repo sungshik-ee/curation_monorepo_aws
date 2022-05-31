@@ -10,6 +10,14 @@ const StyledContainer = styled.div`
     width: 80rem;
     //height: 100%;
 `;
+const StyledAside = styled.div`
+    height: 37rem;
+    overflow: auto;
+`;
+const StyledContent = styled.div`
+    height: 37rem;
+    overflow: auto;
+`;
 
 type Props = {};
 const areas = `
@@ -39,10 +47,11 @@ export const MainLayout: FC<Props> = (props: Props) => {
                             <Composition areas="aside content">
                                 {({ Aside, Content }) => (
                                     <>
-                                        <Aside>
+                                        <Aside as={StyledAside}>
                                             <AsideLayout onClick={handleAsideClick} />
                                         </Aside>
-                                        <Content>
+                                        <Content as={StyledContent}>
+                                            <ContentLayout onClick={handleCardClick} />
                                             <ContentLayout onClick={handleCardClick} />
                                         </Content>
                                     </>

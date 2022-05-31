@@ -2,15 +2,13 @@ import React, { FC } from 'react';
 import _ from 'lodash';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
+import { AsideItem } from './aside/AsideItem';
+import { AsideCompareItem } from './aside/AsideICompareItem';
 
 const StyledContainer = styled.aside`
-    position: absolute;
-    top: 0;
-    bottom: 0;
     width: 13.125rem;
-    //height: 221.85rem;
-    margin-top: 4.688rem;
-    //padding: 3.625rem 1.813rem 181.725rem 1.125rem;
+    min-height: 10rem;
+    height: 100%;
     background-color: #fffdf4;
 `;
 
@@ -25,7 +23,14 @@ export const AsideLayout: FC<Props> = (props: Props) => {
     const handleClick = () => {
         throttledHandleClick(props.key);
     };
-    return <StyledContainer>NAV</StyledContainer>;
+    return (
+        <StyledContainer>
+            <Box flex flexDirection="column" alignItems="start" gap="1rem">
+                <AsideCompareItem />
+                <AsideItem />
+            </Box>
+        </StyledContainer>
+    );
 };
 AsideLayout.defaultProps = {
     key: 'NAV_LAYOUT',

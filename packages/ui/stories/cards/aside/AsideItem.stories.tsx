@@ -19,6 +19,7 @@ export default {
     title: '학생앱/전체보기/레이아웃',
     component: AsideItem,
     argTypes: {
+        onClick: { action: '클릭됨' },
         icon: {
             options: Object.keys(icons),
             mapping: icons,

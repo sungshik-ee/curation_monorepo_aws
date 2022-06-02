@@ -9,7 +9,7 @@ export default {
     title: '학생앱/전체보기/레이아웃',
     component: AsideLayout,
     argTypes: {
-        onClick: { action: '카드 선택됨' },
+        onClick: { action: '선택됨' },
     },
     parameters: {
         // layout: 'centered',

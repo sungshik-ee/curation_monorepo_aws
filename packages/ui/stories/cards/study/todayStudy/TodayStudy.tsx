@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
-import _ from 'lodash';
+import _ from 'lodash-es';
 
 import { TodayStudyCard10 } from './TodayStudyCard10';
 import { TodayStudyCard20 } from './TodayStudyCard20';

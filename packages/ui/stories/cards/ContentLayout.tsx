@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import _ from 'lodash';
+import _ from 'lodash-es';
 import styled from 'styled-components';
 import { TodayStudy } from './study/todayStudy/TodayStudy';
 

@@ -145,6 +145,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/test-runner", "virtual:d2ea8302a1ccba11ab1f932ff59d1932b09f94098f8032fcf1c24ba70d92ad671f076f2c6159b184262ee3f260267cfb0629742a09eee4c553496db4d4eb0b5a#npm:0.0.8"],\
             ["@storybook/testing-library", "npm:0.0.11"],\
             ["@types/lodash", "npm:4.14.182"],\
+            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\
             ["@types/react-dom", "npm:18.0.3"],\
@@ -161,7 +162,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest-environment-node", "npm:27.5.1"],\
             ["jest-playwright-preset", "virtual:d2ea8302a1ccba11ab1f932ff59d1932b09f94098f8032fcf1c24ba70d92ad671f076f2c6159b184262ee3f260267cfb0629742a09eee4c553496db4d4eb0b5a#npm:1.7.0"],\
             ["jest-runner", "npm:27.5.1"],\
-            ["lodash", "npm:4.17.21"],\
+            ["lodash-es", "npm:4.17.21"],\
             ["playwright", "npm:1.21.1"],\
             ["playwright-chromium", "npm:1.21.1"],\
             ["prop-types", "npm:15.8.1"],\
@@ -9548,6 +9549,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["npm:4.14.182", {\
           "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.182-1073aac722-7dd137aa9d.zip/node_modules/@types/lodash/",\
           "packageDependencies": [\
+            ["@types/lodash", "npm:4.14.182"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/lodash-es", [\
+        ["npm:4.17.6", {\
+          "packageLocation": "./.yarn/cache/@types-lodash-es-npm-4.17.6-fd5abbdc74-9bd239dd52.zip/node_modules/@types/lodash-es/",\
+          "packageDependencies": [\
+            ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/lodash", "npm:4.14.182"]\
           ],\
           "linkType": "HARD"\

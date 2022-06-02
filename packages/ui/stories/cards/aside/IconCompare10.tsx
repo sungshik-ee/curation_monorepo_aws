@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import _ from 'lodash';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
 

@@ -2,7 +2,7 @@ import React, { FC, useCallback } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Composition } from 'atomic-layout';
 import styled from 'styled-components';
-import _ from 'lodash';
+import _ from 'lodash-es';
 import { StyledInput as BaseStyledInput } from './styles/input';
 
 enum Gender {

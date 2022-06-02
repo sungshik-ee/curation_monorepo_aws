@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
-import _ from 'lodash';
+import _ from 'lodash-es';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
 import { Icon10 } from './Icon10';
 
 type Props = {
-    // onClickk: (params: any) => void;
-    key?: string;
-    // icon: React.ComponentClass;
+    onClick: (params: string) => void;
+    id: string;
     icon?: FC;
     color?: string;
     label?: string;
@@ -33,12 +32,12 @@ const StyledText = styled.div`
 `;
 
 export const AsideItem: FC<Props> = (props: Props) => {
-    // const throttledHandleClick = _.throttle((key?: string) => {
-    //     // props.onClick(props.key);
-    // }, 3000);
-    // const handleClick = () => {
-    //     throttledHandleClick(props.key);
-    // };
+    const throttledHandleClick = _.throttle((id: string) => {
+        props.onClick(id);
+    }, 1000);
+    const handleClick = () => {
+        throttledHandleClick(props.id);
+    };
     return (
         <>
             <Box
@@ -48,6 +47,7 @@ export const AsideItem: FC<Props> = (props: Props) => {
                 flex
                 justifyContent="start"
                 alignItems="center"
+                onClick={handleClick}
             >
                 {props.icon && <props.icon />}
                 <StyledText>{props.label}</StyledText>
@@ -56,7 +56,7 @@ export const AsideItem: FC<Props> = (props: Props) => {
     );
 };
 AsideItem.defaultProps = {
-    key: 'HEADER_LAYOUT_BACKWARD',
+    id: 'ASIDE_DEFAULT',
     icon: Icon10,
     color: 'rgba(254, 225, 101, 1)',
     label: '오늘의 공부',

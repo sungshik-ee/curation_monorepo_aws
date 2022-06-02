@@ -15,8 +15,8 @@ const StyledImage = styled.img`
     position: absolute;
     width: 33.339px;
     height: 33.339px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 `;
 const StyledIconTextTop = styled.div`
     left: 9.242px;

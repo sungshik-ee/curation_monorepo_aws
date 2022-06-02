@@ -14,8 +14,8 @@ const StyledImg1 = styled.img`
     position: absolute;
     width: 51.272px;
     height: 42.913px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 const StyledDiv2 = styled.div`
@@ -31,8 +31,8 @@ const StyledImg2 = styled.img`
     position: absolute;
     width: 24.157px;
     height: 24.63px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 const StyledDiv3 = styled.div`
@@ -48,8 +48,8 @@ const StyledImg3 = styled.img`
     position: absolute;
     width: 24.157px;
     height: 24.63px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 const StyledDiv4 = styled.div`
@@ -65,8 +65,8 @@ const StyledImg4 = styled.img`
     position: absolute;
     width: 20px;
     height: 20.392px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 const StyledDiv5 = styled.div`
@@ -82,8 +82,8 @@ const StyledImg5 = styled.img`
     position: absolute;
     width: 20px;
     height: 20.392px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 const StyledDiv6 = styled.div`
@@ -99,8 +99,8 @@ const StyledImg6 = styled.img`
     position: absolute;
     width: 28.564px;
     height: 29.124px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 

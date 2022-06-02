@@ -15,8 +15,8 @@ const StyledIconBackgroundContainer = styled.div`
     position: absolute;
     width: 18.817px;
     height: 23.137px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 
@@ -53,7 +53,7 @@ const StyledSvg3 = styled.svg`
     width: 18.816px;
     height: 20.376px;
     left: 0.001px;
-    top: 0px;
+    top: 0;
     transform: matrix(1, 0, 0, 1, 0, 0);
 `;
 const StyledPath4 = styled.path`
@@ -80,8 +80,8 @@ const StyledIconTextTop = styled.div`
     transform: translate(-0.066px, 0.995px) matrix(1, 0.0001, 0, 1, 0.5131, -0.6568)
         rotate(5.937deg);
     transform-origin: center;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     position: absolute;
     overflow: visible;
     width: 8px;

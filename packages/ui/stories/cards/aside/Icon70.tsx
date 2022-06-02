@@ -10,8 +10,8 @@ const StyledIconContainer = styled.div`
     position: relative;
     width: 22.584px;
     height: 22.995px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 `;
 const StyledPath1 = styled.path`
     fill: rgba(202, 152, 229, 1);
@@ -21,7 +21,7 @@ const StyledSvg1 = styled.svg`
     position: absolute;
     width: 22.584px;
     height: 20.93px;
-    left: 0px;
+    left: 0;
     top: 2.065px;
     transform: matrix(1, 0, 0, 1, 0, 0);
 `;
@@ -196,7 +196,7 @@ const StyledSvg15 = styled.svg`
     width: 4.324px;
     height: 4.258px;
     left: 6.394px;
-    top: 0px;
+    top: 0;
     transform: matrix(1, 0, 0, 1, 0, 0);
 `;
 const StyledPath16 = styled.path`
@@ -214,7 +214,7 @@ const StyledSvg16 = styled.svg`
     width: 4.324px;
     height: 4.258px;
     left: 13.637px;
-    top: 0px;
+    top: 0;
     transform: matrix(1, 0, 0, 1, 0, 0);
 `;
 const StyledPath17 = styled.path`

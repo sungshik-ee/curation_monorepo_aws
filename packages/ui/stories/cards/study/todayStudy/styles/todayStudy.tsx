@@ -12,7 +12,7 @@ export const StyledSvg1 = styled.svg`
     width: 122px;
     height: 150px;
     left: 2px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg2 = styled.svg`
     position: absolute;
@@ -20,7 +20,7 @@ export const StyledSvg2 = styled.svg`
     width: 25px;
     height: 150px;
     left: 96px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg3 = styled.svg`
     position: absolute;
@@ -28,7 +28,7 @@ export const StyledSvg3 = styled.svg`
     width: 25px;
     height: 150px;
     left: 95px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg4 = styled.svg`
     position: absolute;
@@ -36,7 +36,7 @@ export const StyledSvg4 = styled.svg`
     width: 25px;
     height: 150px;
     left: 93px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg5 = styled.svg`
     position: absolute;
@@ -44,7 +44,7 @@ export const StyledSvg5 = styled.svg`
     width: 25px;
     height: 150px;
     left: 92px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg6 = styled.svg`
     position: absolute;
@@ -52,15 +52,15 @@ export const StyledSvg6 = styled.svg`
     width: 25px;
     height: 150px;
     left: 90px;
-    top: 0px;
+    top: 0;
 `;
 export const StyledSvg7 = styled.svg`
     overflow: visible;
     position: absolute;
     width: 114px;
     height: 150px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     transform: matrix(1, 0, 0, 1, 0, 0);
 `;
 export const StyledSvg8 = styled.svg`
@@ -76,16 +76,16 @@ export const StyledBackgroundImage = styled.img`
     position: absolute;
     width: 114px;
     height: 150px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 export const StyledImage = styled.img`
     position: absolute;
     width: 114px;
     height: 150px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: visible;
 `;
 export const StyledTitleContainer = styled.div`
@@ -111,8 +111,8 @@ export const StyledTitleTop = styled.div`
     color: rgba(51, 51, 51, 1);
 `;
 export const StyledTitleBottom = styled.div`
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     position: absolute;
     overflow: visible;
     width: 45px;
@@ -132,19 +132,19 @@ export const StyledRect2 = styled.rect`
     fill: rgba(0, 0, 0, 1);
 `;
 export const StyledRect3 = styled.rect`
-    fill: rgba(255,255,255,1);
+    fill: rgba(255, 255, 255, 1);
 `;
 export const StyledRect4 = styled.rect`
     opacity: 0.102;
     fill: rgba(0, 0, 0, 1);
 `;
 export const StyledRect5 = styled.rect`
-    fill: rgba(255,255,255,1);
+    fill: rgba(255, 255, 255, 1);
 `;
 export const StyledRect6 = styled.rect`
     opacity: 0.149;
     fill: rgba(0, 0, 0, 1);
 `;
 export const StyledPath8 = styled.path`
-    fill: rgba(255,255,255,1);
+    fill: rgba(255, 255, 255, 1);
 `;

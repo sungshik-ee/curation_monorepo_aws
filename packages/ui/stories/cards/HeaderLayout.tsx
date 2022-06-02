@@ -43,8 +43,8 @@ const StyledSvg1 = styled.svg`
     overflow: visible;
     width: 46.962px;
     height: 44.39px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 `;
 const StyledPath2 = styled.path`
     fill: rgba(254, 210, 43, 1);

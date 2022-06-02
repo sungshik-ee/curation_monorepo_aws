@@ -28,7 +28,7 @@ const StyledSvg7 = styled.svg`
     width: 114px;
     height: 150px;
     left: 1px;
-    top: 0px;
+    top: 0;
 `;
 const StyledRect7 = styled.rect`
     fill: rgba(113, 156, 214, 1);
@@ -42,8 +42,8 @@ const StyledTitleContainer = styled.div`
     overflow: visible;
 `;
 const StyledTitle = styled.div`
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     position: absolute;
     overflow: visible;
     width: 59px;

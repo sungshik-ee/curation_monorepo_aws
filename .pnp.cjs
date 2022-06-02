@@ -144,7 +144,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@storybook/store", "virtual:d2ea8302a1ccba11ab1f932ff59d1932b09f94098f8032fcf1c24ba70d92ad671f076f2c6159b184262ee3f260267cfb0629742a09eee4c553496db4d4eb0b5a#npm:6.4.22"],\
             ["@storybook/test-runner", "virtual:d2ea8302a1ccba11ab1f932ff59d1932b09f94098f8032fcf1c24ba70d92ad671f076f2c6159b184262ee3f260267cfb0629742a09eee4c553496db4d4eb0b5a#npm:0.0.8"],\
             ["@storybook/testing-library", "npm:0.0.11"],\
-            ["@types/lodash", "npm:4.14.182"],\
             ["@types/lodash-es", "npm:4.17.6"],\
             ["@types/node", "npm:17.0.31"],\
             ["@types/react", "npm:18.0.8"],\

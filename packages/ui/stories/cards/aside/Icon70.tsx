@@ -242,6 +242,7 @@ const StyledSvg18 = styled.svg`
 `;
 
 type Props = {};
+
 export const Icon70: FC<Props> = (props: Props) => {
     return (
         <Box as={StyledContainer} flex justifyContent="center" alignItems="center">

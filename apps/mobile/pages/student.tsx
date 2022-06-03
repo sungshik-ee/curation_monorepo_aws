@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from 'react-query';
 
 import { useAxios } from '@DanbiEduCorp/core/src/axios';
 
-import { TodayStudy } from '@DanbiEduCorp/ui/stories/cards/study/todayStudy/TodayStudy';
+import { MainLayout } from '@DanbiEduCorp/ui/stories/cards/MainLayout';
 
 const Student: NextPage = () => {
     const handleClick = () => {
@@ -14,7 +14,7 @@ const Student: NextPage = () => {
     return (
         <div>
             <div>
-                <TodayStudy onClick={handleClick} />
+                <MainLayout />
             </div>
         </div>
     );

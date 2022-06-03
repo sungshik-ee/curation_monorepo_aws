@@ -1,5 +1,4 @@
 import React from 'react';
-import { AsideCompareItem } from './AsideICompareItem';
 import { AsideItem } from './AsideItem';
 import { Icon10 } from './Icon10';
 import { Icon20 } from './Icon20';

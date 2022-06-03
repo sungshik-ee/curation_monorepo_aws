@@ -3,7 +3,6 @@ import _ from 'lodash-es';
 import styled from 'styled-components';
 import { Box, Composition } from 'atomic-layout';
 import { AsideItem } from './aside/AsideItem';
-import { AsideCompareItem } from './aside/AsideICompareItem';
 import { Icon10 } from './aside/Icon10';
 import { Icon20 } from './aside/Icon20';
 import { Icon30 } from './aside/Icon30';
@@ -48,7 +47,6 @@ export const AsideLayout: FC<Props> = (props: Props) => {
     return (
         <StyledContainer>
             <Box flex flexDirection="column" alignItems="start" gap="1rem">
-                <AsideCompareItem />
                 {props?.items?.map((item) => (
                     <AsideItem
                         onClick={handleClick}

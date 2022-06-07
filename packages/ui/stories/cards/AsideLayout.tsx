@@ -29,7 +29,7 @@ type AsideItem = {
 type Props = {
     onClick: (params: any) => void;
     key?: string;
-    items: Array<AsideItem>;
+    items?: Array<AsideItem>;
 };
 export const AsideLayout: FC<Props> = (props: Props) => {
     const [selected, setSelected] = useState<string | null>('ASIDE_10');

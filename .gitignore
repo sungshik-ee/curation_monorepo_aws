@@ -13,4 +13,5 @@
 /lerna-debug.log
 **/node_modules/
 /apps/ui/storybook-static/
+/packages/ui/storybook-static/
 *.log
